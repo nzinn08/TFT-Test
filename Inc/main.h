@@ -28,6 +28,8 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
+//Take out
+#include "stdint.h"
 #include "stm32f0xx_hal.h"
 
 /* Private includes ----------------------------------------------------------*/
