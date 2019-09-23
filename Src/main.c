@@ -23,7 +23,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "tft-board-specific.h"
+#include "hspi.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,7 +97,32 @@ int main(void)
   MX_USART2_UART_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
-
+  // Main loop - empty the screen as a test.
+  int tft_iter = 0;
+  int tft_on = 0;
+  // Set column range.
+  hspi_cmd(SPI2, 0x2A);
+  hspi_w16(SPI2, 0x0000);
+  hspi_w16(SPI2, (uint16_t)(239));
+  // Set row range.
+  hspi_cmd(SPI2, 0x2B);
+  hspi_w16(SPI2, 0x0000);
+  hspi_w16(SPI2, (uint16_t)(319));
+  // Set 'write to RAM'
+  hspi_cmd(SPI2, 0x2C);
+  while (1) {
+    // Write 320 * 240 pixels.
+    for (tft_iter = 0; tft_iter < (320*240); ++tft_iter) {
+      // Write a 16-bit color.
+      if (tft_on) {
+        hspi_w16(SPI2, 0xF800);
+      }
+      else {
+        hspi_w16(SPI2, 0x001F);
+      }
+    }
+    tft_on = !tft_on;
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -169,8 +195,8 @@ static void MX_SPI2_Init(void)
   hspi2.Init.Mode = SPI_MODE_MASTER;
   hspi2.Init.Direction = SPI_DIRECTION_2LINES;
   hspi2.Init.DataSize = SPI_DATASIZE_8BIT;
-  hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
-  hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi2.Init.CLKPolarity = SPI_POLARITY_HIGH;
+  hspi2.Init.CLKPhase = SPI_PHASE_2EDGE;
   hspi2.Init.NSS = SPI_NSS_SOFT;
   hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
   hspi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
@@ -184,7 +210,12 @@ static void MX_SPI2_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN SPI2_Init 2 */
-
+  //Send 1 random byte to reset the sck
+  uint8_t temp = 0;
+  HAL_SPI_Transmit(&hspi2, &temp, sizeof(temp), HAL_MAX_DELAY);
+  resetTftBoard();
+  pullCSLow();
+  ili9341_hspi_init(hspi2.Instance);
   /* USER CODE END SPI2_Init 2 */
 
 }
