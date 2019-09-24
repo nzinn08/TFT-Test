@@ -1,6 +1,6 @@
-main.c:72:5:main	16	static
-main.c:143:6:SystemClock_Config	112	static
-main.c:183:13:MX_SPI2_Init	16	static
-main.c:228:13:MX_USART2_UART_Init	8	static
-main.c:263:13:MX_GPIO_Init	56	static
-main.c:312:6:Error_Handler	8	static
+main.cpp:73:5:int main()	56	static
+main.cpp:138:6:void SystemClock_Config()	112	static
+main.cpp:178:13:void MX_SPI2_Init()	16	static
+main.cpp:223:13:void MX_USART2_UART_Init()	8	static
+main.cpp:258:13:void MX_GPIO_Init()	56	static
+main.cpp:307:6:void Error_Handler()	8	static

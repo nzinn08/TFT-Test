@@ -18,10 +18,8 @@ Archive member included to satisfy reference by file (symbol)
 Allocating common symbols
 Common symbol       size              file
 
-hspi2               0x64              Src/main.o
 uwTick              0x4               Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
 pFlash              0x20              Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.o
-huart2              0x70              Src/main.o
 
 Discarded input sections
 
@@ -2947,133 +2945,8 @@ Discarded input sections
  .debug_frame   0x0000000000000000      0x130 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.o
  .ARM.attributes
                 0x0000000000000000       0x31 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .group         0x0000000000000000        0xc Src/hspi.o
- .text          0x0000000000000000        0x0 Src/hspi.o
- .data          0x0000000000000000        0x0 Src/hspi.o
- .bss           0x0000000000000000        0x0 Src/hspi.o
- .text.pullCSHigh
-                0x0000000000000000       0x1c Src/hspi.o
- .debug_macro   0x0000000000000000      0xa48 Src/hspi.o
- .debug_macro   0x0000000000000000       0xb1 Src/hspi.o
- .debug_macro   0x0000000000000000       0x2e Src/hspi.o
- .debug_macro   0x0000000000000000       0x22 Src/hspi.o
- .debug_macro   0x0000000000000000       0x22 Src/hspi.o
- .debug_macro   0x0000000000000000       0x8e Src/hspi.o
- .debug_macro   0x0000000000000000       0x51 Src/hspi.o
- .debug_macro   0x0000000000000000       0xef Src/hspi.o
- .debug_macro   0x0000000000000000       0x6a Src/hspi.o
- .debug_macro   0x0000000000000000      0x1df Src/hspi.o
- .debug_macro   0x0000000000000000       0x34 Src/hspi.o
- .debug_macro   0x0000000000000000       0x26 Src/hspi.o
- .debug_macro   0x0000000000000000      0x30d Src/hspi.o
- .debug_macro   0x0000000000000000     0xfe50 Src/hspi.o
- .debug_macro   0x0000000000000000       0x3c Src/hspi.o
- .debug_macro   0x0000000000000000       0x46 Src/hspi.o
- .debug_macro   0x0000000000000000       0x18 Src/hspi.o
- .debug_macro   0x0000000000000000       0x3c Src/hspi.o
- .debug_macro   0x0000000000000000       0x34 Src/hspi.o
- .debug_macro   0x0000000000000000       0x16 Src/hspi.o
- .debug_macro   0x0000000000000000       0x97 Src/hspi.o
- .debug_macro   0x0000000000000000      0x330 Src/hspi.o
- .debug_macro   0x0000000000000000       0xfd Src/hspi.o
- .debug_macro   0x0000000000000000       0x10 Src/hspi.o
- .debug_macro   0x0000000000000000       0x52 Src/hspi.o
- .debug_macro   0x0000000000000000       0x1f Src/hspi.o
- .debug_macro   0x0000000000000000       0x43 Src/hspi.o
- .debug_macro   0x0000000000000000       0x20 Src/hspi.o
- .debug_macro   0x0000000000000000      0x1a3 Src/hspi.o
- .debug_macro   0x0000000000000000       0x10 Src/hspi.o
- .debug_macro   0x0000000000000000       0x1c Src/hspi.o
- .debug_macro   0x0000000000000000       0x52 Src/hspi.o
- .debug_macro   0x0000000000000000       0x40 Src/hspi.o
- .debug_macro   0x0000000000000000       0x10 Src/hspi.o
- .debug_macro   0x0000000000000000       0x40 Src/hspi.o
- .debug_macro   0x0000000000000000       0xd7 Src/hspi.o
- .debug_macro   0x0000000000000000       0x1c Src/hspi.o
- .debug_macro   0x0000000000000000       0x3d Src/hspi.o
- .debug_macro   0x0000000000000000       0x16 Src/hspi.o
- .debug_macro   0x0000000000000000      0x145 Src/hspi.o
- .debug_macro   0x0000000000000000       0x50 Src/hspi.o
- .debug_macro   0x0000000000000000      0x951 Src/hspi.o
- .debug_macro   0x0000000000000000      0x5f3 Src/hspi.o
- .debug_macro   0x0000000000000000      0x13a Src/hspi.o
- .debug_macro   0x0000000000000000      0x1a7 Src/hspi.o
- .debug_macro   0x0000000000000000      0x22c Src/hspi.o
- .debug_macro   0x0000000000000000       0x34 Src/hspi.o
- .debug_macro   0x0000000000000000       0x43 Src/hspi.o
- .debug_macro   0x0000000000000000       0x28 Src/hspi.o
- .debug_macro   0x0000000000000000       0xb6 Src/hspi.o
- .debug_macro   0x0000000000000000      0x217 Src/hspi.o
- .debug_macro   0x0000000000000000      0x202 Src/hspi.o
- .debug_macro   0x0000000000000000       0x61 Src/hspi.o
- .debug_macro   0x0000000000000000       0x90 Src/hspi.o
- .debug_macro   0x0000000000000000       0x4d Src/hspi.o
- .debug_macro   0x0000000000000000      0x16d Src/hspi.o
- .debug_macro   0x0000000000000000      0x2f0 Src/hspi.o
- .debug_macro   0x0000000000000000      0x38a Src/hspi.o
- .debug_macro   0x0000000000000000      0x209 Src/hspi.o
- .debug_macro   0x0000000000000000      0x129 Src/hspi.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
  .group         0x0000000000000000        0xc Src/main.o
  .group         0x0000000000000000        0xc Src/main.o
  .group         0x0000000000000000        0xc Src/main.o
@@ -3138,33 +3011,25 @@ Discarded input sections
  .text          0x0000000000000000        0x0 Src/main.o
  .data          0x0000000000000000        0x0 Src/main.o
  .bss           0x0000000000000000        0x0 Src/main.o
- .debug_macro   0x0000000000000000      0xa48 Src/main.o
- .debug_macro   0x0000000000000000       0xb1 Src/main.o
- .debug_macro   0x0000000000000000       0x2e Src/main.o
- .debug_macro   0x0000000000000000       0x22 Src/main.o
  .debug_macro   0x0000000000000000       0x22 Src/main.o
  .debug_macro   0x0000000000000000       0x8e Src/main.o
  .debug_macro   0x0000000000000000       0x51 Src/main.o
  .debug_macro   0x0000000000000000       0xef Src/main.o
  .debug_macro   0x0000000000000000       0x6a Src/main.o
  .debug_macro   0x0000000000000000      0x1df Src/main.o
- .debug_macro   0x0000000000000000       0x34 Src/main.o
+ .debug_macro   0x0000000000000000       0xb1 Src/main.o
+ .debug_macro   0x0000000000000000       0x2e Src/main.o
+ .debug_macro   0x0000000000000000       0x22 Src/main.o
  .debug_macro   0x0000000000000000       0x26 Src/main.o
- .debug_macro   0x0000000000000000      0x30d Src/main.o
  .debug_macro   0x0000000000000000     0xfe50 Src/main.o
  .debug_macro   0x0000000000000000       0x3c Src/main.o
  .debug_macro   0x0000000000000000       0x46 Src/main.o
  .debug_macro   0x0000000000000000       0x18 Src/main.o
  .debug_macro   0x0000000000000000       0x3c Src/main.o
- .debug_macro   0x0000000000000000       0x34 Src/main.o
  .debug_macro   0x0000000000000000       0x16 Src/main.o
- .debug_macro   0x0000000000000000       0x97 Src/main.o
- .debug_macro   0x0000000000000000      0x330 Src/main.o
- .debug_macro   0x0000000000000000       0xfd Src/main.o
  .debug_macro   0x0000000000000000       0x10 Src/main.o
  .debug_macro   0x0000000000000000       0x52 Src/main.o
  .debug_macro   0x0000000000000000       0x1f Src/main.o
- .debug_macro   0x0000000000000000       0x43 Src/main.o
  .debug_macro   0x0000000000000000       0x20 Src/main.o
  .debug_macro   0x0000000000000000      0x1a3 Src/main.o
  .debug_macro   0x0000000000000000       0x10 Src/main.o
@@ -3177,7 +3042,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x1c Src/main.o
  .debug_macro   0x0000000000000000       0x3d Src/main.o
  .debug_macro   0x0000000000000000       0x16 Src/main.o
- .debug_macro   0x0000000000000000      0x145 Src/main.o
  .debug_macro   0x0000000000000000       0x50 Src/main.o
  .debug_macro   0x0000000000000000      0x951 Src/main.o
  .debug_macro   0x0000000000000000      0x5f3 Src/main.o
@@ -3198,7 +3062,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x38a Src/main.o
  .debug_macro   0x0000000000000000      0x209 Src/main.o
  .debug_macro   0x0000000000000000      0x129 Src/main.o
- .debug_macro   0x0000000000000000       0x70 Src/main.o
  .group         0x0000000000000000        0xc Src/stm32f0xx_hal_msp.o
  .group         0x0000000000000000        0xc Src/stm32f0xx_hal_msp.o
  .group         0x0000000000000000        0xc Src/stm32f0xx_hal_msp.o
@@ -3268,16 +3131,16 @@ Discarded input sections
  .text.HAL_UART_MspDeInit
                 0x0000000000000000       0x40 Src/stm32f0xx_hal_msp.o
  .debug_macro   0x0000000000000000      0xa48 Src/stm32f0xx_hal_msp.o
- .debug_macro   0x0000000000000000       0xb1 Src/stm32f0xx_hal_msp.o
- .debug_macro   0x0000000000000000       0x2e Src/stm32f0xx_hal_msp.o
- .debug_macro   0x0000000000000000       0x22 Src/stm32f0xx_hal_msp.o
  .debug_macro   0x0000000000000000       0x22 Src/stm32f0xx_hal_msp.o
  .debug_macro   0x0000000000000000       0x8e Src/stm32f0xx_hal_msp.o
  .debug_macro   0x0000000000000000       0x51 Src/stm32f0xx_hal_msp.o
  .debug_macro   0x0000000000000000       0xef Src/stm32f0xx_hal_msp.o
  .debug_macro   0x0000000000000000       0x6a Src/stm32f0xx_hal_msp.o
  .debug_macro   0x0000000000000000      0x1df Src/stm32f0xx_hal_msp.o
- .debug_macro   0x0000000000000000       0x34 Src/stm32f0xx_hal_msp.o
+ .debug_macro   0x0000000000000000       0xb1 Src/stm32f0xx_hal_msp.o
+ .debug_macro   0x0000000000000000       0x2e Src/stm32f0xx_hal_msp.o
+ .debug_macro   0x0000000000000000       0x22 Src/stm32f0xx_hal_msp.o
+ .debug_macro   0x0000000000000000       0x3a Src/stm32f0xx_hal_msp.o
  .debug_macro   0x0000000000000000       0x26 Src/stm32f0xx_hal_msp.o
  .debug_macro   0x0000000000000000      0x30d Src/stm32f0xx_hal_msp.o
  .debug_macro   0x0000000000000000     0xfe50 Src/stm32f0xx_hal_msp.o
@@ -3393,16 +3256,16 @@ Discarded input sections
  .data          0x0000000000000000        0x0 Src/stm32f0xx_it.o
  .bss           0x0000000000000000        0x0 Src/stm32f0xx_it.o
  .debug_macro   0x0000000000000000      0xa48 Src/stm32f0xx_it.o
- .debug_macro   0x0000000000000000       0xb1 Src/stm32f0xx_it.o
- .debug_macro   0x0000000000000000       0x2e Src/stm32f0xx_it.o
- .debug_macro   0x0000000000000000       0x22 Src/stm32f0xx_it.o
  .debug_macro   0x0000000000000000       0x22 Src/stm32f0xx_it.o
  .debug_macro   0x0000000000000000       0x8e Src/stm32f0xx_it.o
  .debug_macro   0x0000000000000000       0x51 Src/stm32f0xx_it.o
  .debug_macro   0x0000000000000000       0xef Src/stm32f0xx_it.o
  .debug_macro   0x0000000000000000       0x6a Src/stm32f0xx_it.o
  .debug_macro   0x0000000000000000      0x1df Src/stm32f0xx_it.o
- .debug_macro   0x0000000000000000       0x34 Src/stm32f0xx_it.o
+ .debug_macro   0x0000000000000000       0xb1 Src/stm32f0xx_it.o
+ .debug_macro   0x0000000000000000       0x2e Src/stm32f0xx_it.o
+ .debug_macro   0x0000000000000000       0x22 Src/stm32f0xx_it.o
+ .debug_macro   0x0000000000000000       0x3a Src/stm32f0xx_it.o
  .debug_macro   0x0000000000000000       0x26 Src/stm32f0xx_it.o
  .debug_macro   0x0000000000000000      0x30d Src/stm32f0xx_it.o
  .debug_macro   0x0000000000000000     0xfe50 Src/stm32f0xx_it.o
@@ -3784,133 +3647,391 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x38a Src/system_stm32f0xx.o
  .debug_macro   0x0000000000000000      0x209 Src/system_stm32f0xx.o
  .debug_macro   0x0000000000000000      0x129 Src/system_stm32f0xx.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .group         0x0000000000000000        0xc Src/tft-board-specific.o
- .text          0x0000000000000000        0x0 Src/tft-board-specific.o
- .data          0x0000000000000000        0x0 Src/tft-board-specific.o
- .bss           0x0000000000000000        0x0 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0xa48 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0xb1 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x2e Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x22 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x22 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x8e Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x51 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0xef Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x6a Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x1df Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x34 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x26 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x30d Src/tft-board-specific.o
- .debug_macro   0x0000000000000000     0xfe50 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x3c Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x46 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x18 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x3c Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x34 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x16 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x97 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x330 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0xfd Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x10 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x52 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x1f Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x43 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x20 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x1a3 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x10 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x1c Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x52 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x40 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x10 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x40 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0xd7 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x1c Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x3d Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x16 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x145 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x50 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x951 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x5f3 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x13a Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x1a7 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x22c Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x34 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x43 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x28 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0xb6 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x217 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x202 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x61 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x90 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x4d Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x16d Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x2f0 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x38a Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x209 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000      0x129 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x70 Src/tft-board-specific.o
- .debug_macro   0x0000000000000000       0x70 Src/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/gfx.o
+ .text          0x0000000000000000        0x0 Src/tft-display-code/gfx.o
+ .data          0x0000000000000000        0x0 Src/tft-display-code/gfx.o
+ .bss           0x0000000000000000        0x0 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0xb1a Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x1c Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x22 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x8e Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x51 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0xef Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x6a Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x1df Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0xb1 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x2e Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x22 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x3a Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x26 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x30d Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000     0xfe50 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x3c Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x46 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x18 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x3c Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x34 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x16 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x97 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x353 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x104 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x10 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x52 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x1f Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x43 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x20 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x1a3 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x10 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x1c Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x52 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x40 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x10 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x40 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0xd7 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x1c Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x3d Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x16 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x137 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x50 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x951 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x5f3 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x13a Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x1a7 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x22c Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x34 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x43 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x28 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0xb6 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x217 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x202 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x61 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x90 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x4d Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x16d Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x2f0 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x38a Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x209 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000      0x129 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000000000       0x70 Src/tft-display-code/gfx.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/hspi.o
+ .text          0x0000000000000000        0x0 Src/tft-display-code/hspi.o
+ .data          0x0000000000000000        0x0 Src/tft-display-code/hspi.o
+ .bss           0x0000000000000000        0x0 Src/tft-display-code/hspi.o
+ .text.pullCSHigh
+                0x0000000000000000       0x1c Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0xa48 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x22 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x8e Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x51 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0xef Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x6a Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x1df Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0xb1 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x2e Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x22 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x3a Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x26 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x30d Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000     0xfe50 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x3c Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x46 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x18 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x3c Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x34 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x16 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x97 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x330 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0xfd Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x10 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x52 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x1f Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x43 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x20 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x1a3 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x10 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x1c Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x52 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x40 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x10 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x40 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0xd7 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x1c Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x3d Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x16 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x145 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x50 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x951 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x5f3 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x13a Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x1a7 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x22c Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x34 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x43 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x28 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0xb6 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x217 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x202 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x61 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x90 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x4d Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x16d Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x2f0 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x38a Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x209 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000      0x129 Src/tft-display-code/hspi.o
+ .debug_macro   0x0000000000000000       0x70 Src/tft-display-code/hspi.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .group         0x0000000000000000        0xc Src/tft-display-code/tft-board-specific.o
+ .text          0x0000000000000000        0x0 Src/tft-display-code/tft-board-specific.o
+ .data          0x0000000000000000        0x0 Src/tft-display-code/tft-board-specific.o
+ .bss           0x0000000000000000        0x0 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0xa48 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x22 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x8e Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x51 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0xef Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x6a Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x1df Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0xb1 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x2e Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x22 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x3a Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x26 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x30d Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000     0xfe50 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x3c Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x46 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x18 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x3c Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x34 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x16 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x97 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x330 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0xfd Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x10 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x52 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x1f Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x43 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x20 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x1a3 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x10 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x1c Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x52 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x40 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x10 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x40 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0xd7 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x1c Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x3d Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x16 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x145 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x50 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x951 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x5f3 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x13a Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x1a7 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x22c Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x34 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x43 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x28 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0xb6 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x217 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x202 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x61 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x90 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x4d Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x16d Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x2f0 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x38a Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x209 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000      0x129 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x70 Src/tft-display-code/tft-board-specific.o
+ .debug_macro   0x0000000000000000       0x70 Src/tft-display-code/tft-board-specific.o
  .text          0x0000000000000000       0x14 Startup/startup_stm32f072rbtx.o
  .data          0x0000000000000000        0x0 Startup/startup_stm32f072rbtx.o
  .bss           0x0000000000000000        0x0 Startup/startup_stm32f072rbtx.o
@@ -3989,14 +4110,15 @@ LOAD Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.o
 LOAD Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.o
 LOAD Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.o
 LOAD Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.o
-LOAD Src/hspi.o
 LOAD Src/main.o
 LOAD Src/stm32f0xx_hal_msp.o
 LOAD Src/stm32f0xx_it.o
 LOAD Src/syscalls.o
 LOAD Src/sysmem.o
 LOAD Src/system_stm32f0xx.o
-LOAD Src/tft-board-specific.o
+LOAD Src/tft-display-code/gfx.o
+LOAD Src/tft-display-code/hspi.o
+LOAD Src/tft-display-code/tft-board-specific.o
 LOAD Startup/startup_stm32f072rbtx.o
 START GROUP
 LOAD /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libstdc++_nano.a
@@ -4032,7 +4154,7 @@ LOAD /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.g
                 0x0000000008000000                g_pfnVectors
                 0x00000000080000c0                . = ALIGN (0x4)
 
-.text           0x00000000080000c0     0x2bb4
+.text           0x00000000080000c0     0x364c
                 0x00000000080000c0                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080000c0       0x48 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
@@ -4123,195 +4245,221 @@ LOAD /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.g
  .text.UART_WaitOnFlagUntilTimeout
                 0x0000000008002038       0x98 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.o
                 0x0000000008002038                UART_WaitOnFlagUntilTimeout
- .text.pullCSLow
-                0x00000000080020d0       0x1c Src/hspi.o
-                0x00000000080020d0                pullCSLow
- .text.hspi_w8  0x00000000080020ec       0x2c Src/hspi.o
-                0x00000000080020ec                hspi_w8
- .text.hspi_w16
-                0x0000000008002118       0x46 Src/hspi.o
-                0x0000000008002118                hspi_w16
- *fill*         0x000000000800215e        0x2 
- .text.hspi_cmd
-                0x0000000008002160       0x58 Src/hspi.o
-                0x0000000008002160                hspi_cmd
- .text.ili9341_hspi_init
-                0x00000000080021b8      0x396 Src/hspi.o
-                0x00000000080021b8                ili9341_hspi_init
- *fill*         0x000000000800254e        0x2 
- .text.main     0x0000000008002550       0xb4 Src/main.o
-                0x0000000008002550                main
- .text.SystemClock_Config
-                0x0000000008002604       0xa6 Src/main.o
-                0x0000000008002604                SystemClock_Config
- *fill*         0x00000000080026aa        0x2 
- .text.MX_SPI2_Init
-                0x00000000080026ac       0xa8 Src/main.o
- .text.MX_USART2_UART_Init
-                0x0000000008002754       0x60 Src/main.o
- .text.MX_GPIO_Init
-                0x00000000080027b4      0x130 Src/main.o
+ .text.main     0x00000000080020d0      0x284 Src/main.o
+                0x00000000080020d0                main
+ .text._Z18SystemClock_Configv
+                0x0000000008002354       0xbe Src/main.o
+                0x0000000008002354                SystemClock_Config()
+ *fill*         0x0000000008002412        0x2 
+ .text._ZL12MX_SPI2_Initv
+                0x0000000008002414       0xb0 Src/main.o
+ .text._ZL19MX_USART2_UART_Initv
+                0x00000000080024c4       0x68 Src/main.o
+ .text._ZL12MX_GPIO_Initv
+                0x000000000800252c      0x130 Src/main.o
  .text.Error_Handler
-                0x00000000080028e4        0xa Src/main.o
-                0x00000000080028e4                Error_Handler
- *fill*         0x00000000080028ee        0x2 
+                0x000000000800265c        0xa Src/main.o
+                0x000000000800265c                Error_Handler
+ *fill*         0x0000000008002666        0x2 
  .text.HAL_MspInit
-                0x00000000080028f0       0x48 Src/stm32f0xx_hal_msp.o
-                0x00000000080028f0                HAL_MspInit
+                0x0000000008002668       0x48 Src/stm32f0xx_hal_msp.o
+                0x0000000008002668                HAL_MspInit
  .text.HAL_SPI_MspInit
-                0x0000000008002938       0xec Src/stm32f0xx_hal_msp.o
-                0x0000000008002938                HAL_SPI_MspInit
+                0x00000000080026b0       0xec Src/stm32f0xx_hal_msp.o
+                0x00000000080026b0                HAL_SPI_MspInit
  .text.HAL_UART_MspInit
-                0x0000000008002a24       0x98 Src/stm32f0xx_hal_msp.o
-                0x0000000008002a24                HAL_UART_MspInit
+                0x000000000800279c       0x98 Src/stm32f0xx_hal_msp.o
+                0x000000000800279c                HAL_UART_MspInit
  .text.NMI_Handler
-                0x0000000008002abc        0xa Src/stm32f0xx_it.o
-                0x0000000008002abc                NMI_Handler
+                0x0000000008002834        0xa Src/stm32f0xx_it.o
+                0x0000000008002834                NMI_Handler
  .text.HardFault_Handler
-                0x0000000008002ac6        0x6 Src/stm32f0xx_it.o
-                0x0000000008002ac6                HardFault_Handler
+                0x000000000800283e        0x6 Src/stm32f0xx_it.o
+                0x000000000800283e                HardFault_Handler
  .text.SVC_Handler
-                0x0000000008002acc        0xa Src/stm32f0xx_it.o
-                0x0000000008002acc                SVC_Handler
+                0x0000000008002844        0xa Src/stm32f0xx_it.o
+                0x0000000008002844                SVC_Handler
  .text.PendSV_Handler
-                0x0000000008002ad6        0xa Src/stm32f0xx_it.o
-                0x0000000008002ad6                PendSV_Handler
+                0x000000000800284e        0xa Src/stm32f0xx_it.o
+                0x000000000800284e                PendSV_Handler
  .text.SysTick_Handler
-                0x0000000008002ae0        0xe Src/stm32f0xx_it.o
-                0x0000000008002ae0                SysTick_Handler
- *fill*         0x0000000008002aee        0x2 
+                0x0000000008002858        0xe Src/stm32f0xx_it.o
+                0x0000000008002858                SysTick_Handler
+ *fill*         0x0000000008002866        0x2 
  .text.SystemInit
-                0x0000000008002af0       0x88 Src/system_stm32f0xx.o
-                0x0000000008002af0                SystemInit
+                0x0000000008002868       0x88 Src/system_stm32f0xx.o
+                0x0000000008002868                SystemInit
+ .text._ZN7TFT_GFXC2EP11SPI_TypeDef
+                0x00000000080028f0       0x1a Src/tft-display-code/gfx.o
+                0x00000000080028f0                TFT_GFX::TFT_GFX(SPI_TypeDef*)
+                0x00000000080028f0                TFT_GFX::TFT_GFX(SPI_TypeDef*)
+ .text._ZN7TFT_GFX13setAddrWindowEtttt
+                0x000000000800290a       0xc4 Src/tft-display-code/gfx.o
+                0x000000000800290a                TFT_GFX::setAddrWindow(unsigned short, unsigned short, unsigned short, unsigned short)
+ .text._ZN7TFT_GFX10writePixelEsst
+                0x00000000080029ce       0x86 Src/tft-display-code/gfx.o
+                0x00000000080029ce                TFT_GFX::writePixel(short, short, unsigned short)
+ .text._ZN7TFT_GFX13writeFillRectEsssst
+                0x0000000008002a54      0x1be Src/tft-display-code/gfx.o
+                0x0000000008002a54                TFT_GFX::writeFillRect(short, short, short, short, unsigned short)
+ .text._ZN7TFT_GFX23writeFillRectPreclippedEsssst
+                0x0000000008002c12       0x64 Src/tft-display-code/gfx.o
+                0x0000000008002c12                TFT_GFX::writeFillRectPreclipped(short, short, short, short, unsigned short)
+ .text._ZN7TFT_GFX10writeColorEtm
+                0x0000000008002c76       0x40 Src/tft-display-code/gfx.o
+                0x0000000008002c76                TFT_GFX::writeColor(unsigned short, unsigned long)
+ .text._ZN7TFT_GFX14writeFastVLineEssst
+                0x0000000008002cb6      0x118 Src/tft-display-code/gfx.o
+                0x0000000008002cb6                TFT_GFX::writeFastVLine(short, short, short, unsigned short)
+ *fill*         0x0000000008002dce        0x2 
+ .text._ZN7TFT_GFX8drawCharEsshtthh
+                0x0000000008002dd0      0x3c4 Src/tft-display-code/gfx.o
+                0x0000000008002dd0                TFT_GFX::drawChar(short, short, unsigned char, unsigned short, unsigned short, unsigned char, unsigned char)
+ .text.pullCSLow
+                0x0000000008003194       0x1c Src/tft-display-code/hspi.o
+                0x0000000008003194                pullCSLow
+ .text.hspi_w8  0x00000000080031b0       0x2c Src/tft-display-code/hspi.o
+                0x00000000080031b0                hspi_w8
+ .text.hspi_w16
+                0x00000000080031dc       0x46 Src/tft-display-code/hspi.o
+                0x00000000080031dc                hspi_w16
+ *fill*         0x0000000008003222        0x2 
+ .text.hspi_cmd
+                0x0000000008003224       0x58 Src/tft-display-code/hspi.o
+                0x0000000008003224                hspi_cmd
+ .text.ili9341_hspi_init
+                0x000000000800327c      0x396 Src/tft-display-code/hspi.o
+                0x000000000800327c                ili9341_hspi_init
  .text.resetTftBoard
-                0x0000000008002b78       0x36 Src/tft-board-specific.o
-                0x0000000008002b78                resetTftBoard
- *fill*         0x0000000008002bae        0x2 
+                0x0000000008003612       0x36 Src/tft-display-code/tft-board-specific.o
+                0x0000000008003612                resetTftBoard
  .text.Reset_Handler
-                0x0000000008002bb0       0x50 Startup/startup_stm32f072rbtx.o
-                0x0000000008002bb0                Reset_Handler
+                0x0000000008003648       0x50 Startup/startup_stm32f072rbtx.o
+                0x0000000008003648                Reset_Handler
  .text.Default_Handler
-                0x0000000008002c00        0x2 Startup/startup_stm32f072rbtx.o
-                0x0000000008002c00                TIM1_CC_IRQHandler
-                0x0000000008002c00                TSC_IRQHandler
-                0x0000000008002c00                ADC1_COMP_IRQHandler
-                0x0000000008002c00                I2C1_IRQHandler
-                0x0000000008002c00                RCC_CRS_IRQHandler
-                0x0000000008002c00                SPI1_IRQHandler
-                0x0000000008002c00                TIM6_DAC_IRQHandler
-                0x0000000008002c00                USART3_4_IRQHandler
-                0x0000000008002c00                EXTI2_3_IRQHandler
-                0x0000000008002c00                I2C2_IRQHandler
-                0x0000000008002c00                TIM17_IRQHandler
-                0x0000000008002c00                CEC_CAN_IRQHandler
-                0x0000000008002c00                RTC_IRQHandler
-                0x0000000008002c00                PVD_VDDIO2_IRQHandler
-                0x0000000008002c00                DMA1_Channel4_5_6_7_IRQHandler
-                0x0000000008002c00                TIM16_IRQHandler
-                0x0000000008002c00                TIM3_IRQHandler
-                0x0000000008002c00                EXTI4_15_IRQHandler
-                0x0000000008002c00                DMA1_Channel1_IRQHandler
-                0x0000000008002c00                Default_Handler
-                0x0000000008002c00                TIM14_IRQHandler
-                0x0000000008002c00                TIM7_IRQHandler
-                0x0000000008002c00                TIM15_IRQHandler
-                0x0000000008002c00                EXTI0_1_IRQHandler
-                0x0000000008002c00                USB_IRQHandler
-                0x0000000008002c00                SPI2_IRQHandler
-                0x0000000008002c00                WWDG_IRQHandler
-                0x0000000008002c00                TIM2_IRQHandler
-                0x0000000008002c00                DMA1_Channel2_3_IRQHandler
-                0x0000000008002c00                USART2_IRQHandler
-                0x0000000008002c00                FLASH_IRQHandler
-                0x0000000008002c00                USART1_IRQHandler
-                0x0000000008002c00                TIM1_BRK_UP_TRG_COM_IRQHandler
- *fill*         0x0000000008002c02        0x2 
+                0x0000000008003698        0x2 Startup/startup_stm32f072rbtx.o
+                0x0000000008003698                TIM1_CC_IRQHandler
+                0x0000000008003698                TSC_IRQHandler
+                0x0000000008003698                ADC1_COMP_IRQHandler
+                0x0000000008003698                I2C1_IRQHandler
+                0x0000000008003698                RCC_CRS_IRQHandler
+                0x0000000008003698                SPI1_IRQHandler
+                0x0000000008003698                TIM6_DAC_IRQHandler
+                0x0000000008003698                USART3_4_IRQHandler
+                0x0000000008003698                EXTI2_3_IRQHandler
+                0x0000000008003698                I2C2_IRQHandler
+                0x0000000008003698                TIM17_IRQHandler
+                0x0000000008003698                CEC_CAN_IRQHandler
+                0x0000000008003698                RTC_IRQHandler
+                0x0000000008003698                PVD_VDDIO2_IRQHandler
+                0x0000000008003698                DMA1_Channel4_5_6_7_IRQHandler
+                0x0000000008003698                TIM16_IRQHandler
+                0x0000000008003698                TIM3_IRQHandler
+                0x0000000008003698                EXTI4_15_IRQHandler
+                0x0000000008003698                DMA1_Channel1_IRQHandler
+                0x0000000008003698                Default_Handler
+                0x0000000008003698                TIM14_IRQHandler
+                0x0000000008003698                TIM7_IRQHandler
+                0x0000000008003698                TIM15_IRQHandler
+                0x0000000008003698                EXTI0_1_IRQHandler
+                0x0000000008003698                USB_IRQHandler
+                0x0000000008003698                SPI2_IRQHandler
+                0x0000000008003698                WWDG_IRQHandler
+                0x0000000008003698                TIM2_IRQHandler
+                0x0000000008003698                DMA1_Channel2_3_IRQHandler
+                0x0000000008003698                USART2_IRQHandler
+                0x0000000008003698                FLASH_IRQHandler
+                0x0000000008003698                USART1_IRQHandler
+                0x0000000008003698                TIM1_BRK_UP_TRG_COM_IRQHandler
+ *fill*         0x000000000800369a        0x2 
  .text.__libc_init_array
-                0x0000000008002c04       0x48 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
-                0x0000000008002c04                __libc_init_array
- .text.memset   0x0000000008002c4c       0x10 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-memset.o)
-                0x0000000008002c4c                memset
+                0x000000000800369c       0x48 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
+                0x000000000800369c                __libc_init_array
+ .text.memset   0x00000000080036e4       0x10 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-memset.o)
+                0x00000000080036e4                memset
  *(.glue_7)
- .glue_7        0x0000000008002c5c        0x0 linker stubs
+ .glue_7        0x00000000080036f4        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008002c5c        0x0 linker stubs
+ .glue_7t       0x00000000080036f4        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008002c5c        0x0 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+ .eh_frame      0x00000000080036f4        0x0 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
  *(.init)
- .init          0x0000000008002c5c        0x4 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
-                0x0000000008002c5c                _init
- .init          0x0000000008002c60        0x8 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
+ .init          0x00000000080036f4        0x4 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
+                0x00000000080036f4                _init
+ .init          0x00000000080036f8        0x8 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
  *(.fini)
- .fini          0x0000000008002c68        0x4 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
-                0x0000000008002c68                _fini
- .fini          0x0000000008002c6c        0x8 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
-                0x0000000008002c74                . = ALIGN (0x4)
-                0x0000000008002c74                _etext = .
+ .fini          0x0000000008003700        0x4 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
+                0x0000000008003700                _fini
+ .fini          0x0000000008003704        0x8 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
+                0x000000000800370c                . = ALIGN (0x4)
+                0x000000000800370c                _etext = .
 
-.vfp11_veneer   0x0000000008002c74        0x0
- .vfp11_veneer  0x0000000008002c74        0x0 linker stubs
+.vfp11_veneer   0x000000000800370c        0x0
+ .vfp11_veneer  0x000000000800370c        0x0 linker stubs
 
-.v4_bx          0x0000000008002c74        0x0
- .v4_bx         0x0000000008002c74        0x0 linker stubs
+.v4_bx          0x000000000800370c        0x0
+ .v4_bx         0x000000000800370c        0x0 linker stubs
 
-.iplt           0x0000000008002c74        0x0
- .iplt          0x0000000008002c74        0x0 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+.iplt           0x000000000800370c        0x0
+ .iplt          0x000000000800370c        0x0 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
-.rodata         0x0000000008002c74       0x38
-                0x0000000008002c74                . = ALIGN (0x4)
+.rodata         0x000000000800370c      0x538
+                0x000000000800370c                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0000000008002c74       0x20 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.o
+ .rodata        0x000000000800370c       0x20 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.o
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x0000000008002c94       0x10 Src/system_stm32f0xx.o
-                0x0000000008002c94                AHBPrescTable
+                0x000000000800372c       0x10 Src/system_stm32f0xx.o
+                0x000000000800372c                AHBPrescTable
  .rodata.APBPrescTable
-                0x0000000008002ca4        0x8 Src/system_stm32f0xx.o
-                0x0000000008002ca4                APBPrescTable
-                0x0000000008002cac                . = ALIGN (0x4)
+                0x000000000800373c        0x8 Src/system_stm32f0xx.o
+                0x000000000800373c                APBPrescTable
+ .rodata._ZN12_GLOBAL__N_1L4fontE
+                0x0000000008003744      0x500 Src/tft-display-code/gfx.o
+                0x0000000008003c44                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008002cac        0x0
- .rel.iplt      0x0000000008002cac        0x0 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+.rel.dyn        0x0000000008003c44        0x0
+ .rel.iplt      0x0000000008003c44        0x0 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
-.ARM.extab      0x0000000008002cac        0x0
-                0x0000000008002cac                . = ALIGN (0x4)
+.ARM.extab      0x0000000008003c44        0x0
+                0x0000000008003c44                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008002cac                . = ALIGN (0x4)
+                0x0000000008003c44                . = ALIGN (0x4)
 
-.ARM            0x0000000008002cac        0x0
-                0x0000000008002cac                . = ALIGN (0x4)
-                0x0000000008002cac                __exidx_start = .
+.ARM            0x0000000008003c44        0x0
+                0x0000000008003c44                . = ALIGN (0x4)
+                0x0000000008003c44                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008002cac                __exidx_end = .
-                0x0000000008002cac                . = ALIGN (0x4)
+                0x0000000008003c44                __exidx_end = .
+                0x0000000008003c44                . = ALIGN (0x4)
 
-.preinit_array  0x0000000008002cac        0x0
-                0x0000000008002cac                . = ALIGN (0x4)
-                0x0000000008002cac                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008003c44        0x0
+                0x0000000008003c44                . = ALIGN (0x4)
+                0x0000000008003c44                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008002cac                PROVIDE (__preinit_array_end = .)
-                0x0000000008002cac                . = ALIGN (0x4)
+                0x0000000008003c44                PROVIDE (__preinit_array_end = .)
+                0x0000000008003c44                . = ALIGN (0x4)
 
-.init_array     0x0000000008002cac        0x4
-                0x0000000008002cac                . = ALIGN (0x4)
-                0x0000000008002cac                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008003c44        0x4
+                0x0000000008003c44                . = ALIGN (0x4)
+                0x0000000008003c44                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008002cac        0x4 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
-                0x0000000008002cb0                PROVIDE (__init_array_end = .)
-                0x0000000008002cb0                . = ALIGN (0x4)
+ .init_array    0x0000000008003c44        0x4 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+                0x0000000008003c48                PROVIDE (__init_array_end = .)
+                0x0000000008003c48                . = ALIGN (0x4)
 
-.fini_array     0x0000000008002cb0        0x4
-                0x0000000008002cb0                . = ALIGN (0x4)
+.fini_array     0x0000000008003c48        0x4
+                0x0000000008003c48                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008002cb0        0x4 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+ .fini_array    0x0000000008003c48        0x4 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000008002cb4                . = ALIGN (0x4)
-                0x0000000008002cb4                _sidata = LOADADDR (.data)
+                0x0000000008003c4c                . = ALIGN (0x4)
+                0x0000000008003c4c                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000        0x4 load address 0x0000000008002cb4
+.data           0x0000000020000000        0x4 load address 0x0000000008003c4c
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -4322,28 +4470,29 @@ LOAD /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.g
                 0x0000000020000004                . = ALIGN (0x4)
                 0x0000000020000004                _edata = .
 
-.igot.plt       0x0000000020000004        0x0 load address 0x0000000008002cb8
+.igot.plt       0x0000000020000004        0x0 load address 0x0000000008003c50
  .igot.plt      0x0000000020000004        0x0 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
                 0x0000000020000004                . = ALIGN (0x4)
 
-.bss            0x0000000020000004       0xf4 load address 0x0000000008002cb8
+.bss            0x0000000020000004       0xf4 load address 0x0000000008003c50
                 0x0000000020000004                _sbss = .
                 0x0000000020000004                __bss_start__ = _sbss
  *(.bss)
  .bss           0x0000000020000004       0x1c /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
  *(.bss*)
+ .bss.hspi2     0x0000000020000020       0x64 Src/main.o
+                0x0000000020000020                hspi2
+ .bss.huart2    0x0000000020000084       0x70 Src/main.o
+                0x0000000020000084                huart2
  *(COMMON)
- COMMON         0x0000000020000020        0x4 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
-                0x0000000020000020                uwTick
- COMMON         0x0000000020000024       0xd4 Src/main.o
-                0x0000000020000024                hspi2
-                0x0000000020000088                huart2
+ COMMON         0x00000000200000f4        0x4 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
+                0x00000000200000f4                uwTick
                 0x00000000200000f8                . = ALIGN (0x4)
                 0x00000000200000f8                _ebss = .
                 0x00000000200000f8                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200000f8      0x600 load address 0x0000000008002cb8
+                0x00000000200000f8      0x600 load address 0x0000000008003c50
                 0x00000000200000f8                . = ALIGN (0x8)
                 0x00000000200000f8                PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
@@ -4380,32 +4529,34 @@ LOAD /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.g
  .ARM.attributes
                 0x0000000000000170       0x31 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.o
  .ARM.attributes
-                0x00000000000001a1       0x31 Src/hspi.o
+                0x00000000000001a1       0x31 Src/main.o
  .ARM.attributes
-                0x00000000000001d2       0x31 Src/main.o
+                0x00000000000001d2       0x31 Src/stm32f0xx_hal_msp.o
  .ARM.attributes
-                0x0000000000000203       0x31 Src/stm32f0xx_hal_msp.o
+                0x0000000000000203       0x31 Src/stm32f0xx_it.o
  .ARM.attributes
-                0x0000000000000234       0x31 Src/stm32f0xx_it.o
+                0x0000000000000234       0x31 Src/system_stm32f0xx.o
  .ARM.attributes
-                0x0000000000000265       0x31 Src/system_stm32f0xx.o
+                0x0000000000000265       0x31 Src/tft-display-code/gfx.o
  .ARM.attributes
-                0x0000000000000296       0x31 Src/tft-board-specific.o
+                0x0000000000000296       0x31 Src/tft-display-code/hspi.o
  .ARM.attributes
-                0x00000000000002c7       0x21 Startup/startup_stm32f072rbtx.o
+                0x00000000000002c7       0x31 Src/tft-display-code/tft-board-specific.o
  .ARM.attributes
-                0x00000000000002e8       0x2c /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
+                0x00000000000002f8       0x21 Startup/startup_stm32f072rbtx.o
  .ARM.attributes
-                0x0000000000000314       0x2c /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-memset.o)
+                0x0000000000000319       0x2c /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x0000000000000340       0x1e /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o)
+                0x0000000000000345       0x2c /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x000000000000035e       0x1e /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+                0x0000000000000371       0x1e /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o)
  .ARM.attributes
-                0x000000000000037c       0x1e /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
+                0x000000000000038f       0x1e /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000000000003ad       0x1e /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
 OUTPUT(TFT_Test.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0xd4a5
+.debug_info     0x0000000000000000     0xe85f
  .debug_info    0x0000000000000000      0xdf3 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
  .debug_info    0x0000000000000df3      0xf39 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o
  .debug_info    0x0000000000001d2c      0xe52 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o
@@ -4413,15 +4564,16 @@ OUTPUT(TFT_Test.elf elf32-littlearm)
  .debug_info    0x0000000000003b26      0xe34 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o
  .debug_info    0x000000000000495a     0x1d8b Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o
  .debug_info    0x00000000000066e5     0x1b58 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.o
- .debug_info    0x000000000000823d      0xb38 Src/hspi.o
- .debug_info    0x0000000000008d75     0x15a6 Src/main.o
- .debug_info    0x000000000000a31b     0x13e6 Src/stm32f0xx_hal_msp.o
- .debug_info    0x000000000000b701      0x95a Src/stm32f0xx_it.o
- .debug_info    0x000000000000c05b      0xa60 Src/system_stm32f0xx.o
- .debug_info    0x000000000000cabb      0x9c8 Src/tft-board-specific.o
- .debug_info    0x000000000000d483       0x22 Startup/startup_stm32f072rbtx.o
+ .debug_info    0x000000000000823d     0x18ef Src/main.o
+ .debug_info    0x0000000000009b2c     0x13e6 Src/stm32f0xx_hal_msp.o
+ .debug_info    0x000000000000af12      0x95a Src/stm32f0xx_it.o
+ .debug_info    0x000000000000b86c      0xa60 Src/system_stm32f0xx.o
+ .debug_info    0x000000000000c2cc     0x1071 Src/tft-display-code/gfx.o
+ .debug_info    0x000000000000d33d      0xb38 Src/tft-display-code/hspi.o
+ .debug_info    0x000000000000de75      0x9c8 Src/tft-display-code/tft-board-specific.o
+ .debug_info    0x000000000000e83d       0x22 Startup/startup_stm32f072rbtx.o
 
-.debug_abbrev   0x0000000000000000     0x1cd9
+.debug_abbrev   0x0000000000000000     0x2074
  .debug_abbrev  0x0000000000000000      0x26b Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
  .debug_abbrev  0x000000000000026b      0x314 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o
  .debug_abbrev  0x000000000000057f      0x251 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o
@@ -4429,15 +4581,16 @@ OUTPUT(TFT_Test.elf elf32-littlearm)
  .debug_abbrev  0x0000000000000a56      0x25a Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o
  .debug_abbrev  0x0000000000000cb0      0x299 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o
  .debug_abbrev  0x0000000000000f49      0x276 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.o
- .debug_abbrev  0x00000000000011bf      0x1da Src/hspi.o
- .debug_abbrev  0x0000000000001399      0x25f Src/main.o
- .debug_abbrev  0x00000000000015f8      0x1ee Src/stm32f0xx_hal_msp.o
- .debug_abbrev  0x00000000000017e6      0x18c Src/stm32f0xx_it.o
- .debug_abbrev  0x0000000000001972      0x1cd Src/system_stm32f0xx.o
- .debug_abbrev  0x0000000000001b3f      0x188 Src/tft-board-specific.o
- .debug_abbrev  0x0000000000001cc7       0x12 Startup/startup_stm32f072rbtx.o
+ .debug_abbrev  0x00000000000011bf      0x2fe Src/main.o
+ .debug_abbrev  0x00000000000014bd      0x1ee Src/stm32f0xx_hal_msp.o
+ .debug_abbrev  0x00000000000016ab      0x18c Src/stm32f0xx_it.o
+ .debug_abbrev  0x0000000000001837      0x1cd Src/system_stm32f0xx.o
+ .debug_abbrev  0x0000000000001a04      0x2fc Src/tft-display-code/gfx.o
+ .debug_abbrev  0x0000000000001d00      0x1da Src/tft-display-code/hspi.o
+ .debug_abbrev  0x0000000000001eda      0x188 Src/tft-display-code/tft-board-specific.o
+ .debug_abbrev  0x0000000000002062       0x12 Startup/startup_stm32f072rbtx.o
 
-.debug_aranges  0x0000000000000000      0x7f8
+.debug_aranges  0x0000000000000000      0x850
  .debug_aranges
                 0x0000000000000000       0xb8 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
  .debug_aranges
@@ -4453,21 +4606,23 @@ OUTPUT(TFT_Test.elf elf32-littlearm)
  .debug_aranges
                 0x00000000000004a0      0x1d8 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.o
  .debug_aranges
-                0x0000000000000678       0x48 Src/hspi.o
+                0x0000000000000678       0x48 Src/main.o
  .debug_aranges
-                0x00000000000006c0       0x48 Src/main.o
+                0x00000000000006c0       0x40 Src/stm32f0xx_hal_msp.o
  .debug_aranges
-                0x0000000000000708       0x40 Src/stm32f0xx_hal_msp.o
+                0x0000000000000700       0x40 Src/stm32f0xx_it.o
  .debug_aranges
-                0x0000000000000748       0x40 Src/stm32f0xx_it.o
+                0x0000000000000740       0x28 Src/system_stm32f0xx.o
  .debug_aranges
-                0x0000000000000788       0x28 Src/system_stm32f0xx.o
+                0x0000000000000768       0x58 Src/tft-display-code/gfx.o
  .debug_aranges
-                0x00000000000007b0       0x20 Src/tft-board-specific.o
+                0x00000000000007c0       0x48 Src/tft-display-code/hspi.o
  .debug_aranges
-                0x00000000000007d0       0x28 Startup/startup_stm32f072rbtx.o
+                0x0000000000000808       0x20 Src/tft-display-code/tft-board-specific.o
+ .debug_aranges
+                0x0000000000000828       0x28 Startup/startup_stm32f072rbtx.o
 
-.debug_ranges   0x0000000000000000      0x720
+.debug_ranges   0x0000000000000000      0x768
  .debug_ranges  0x0000000000000000       0xa8 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
  .debug_ranges  0x00000000000000a8       0xb0 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o
  .debug_ranges  0x0000000000000158       0x48 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o
@@ -4475,15 +4630,16 @@ OUTPUT(TFT_Test.elf elf32-littlearm)
  .debug_ranges  0x0000000000000210       0x68 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o
  .debug_ranges  0x0000000000000278      0x1c8 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o
  .debug_ranges  0x0000000000000440      0x1c8 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.o
- .debug_ranges  0x0000000000000608       0x38 Src/hspi.o
- .debug_ranges  0x0000000000000640       0x38 Src/main.o
- .debug_ranges  0x0000000000000678       0x30 Src/stm32f0xx_hal_msp.o
- .debug_ranges  0x00000000000006a8       0x30 Src/stm32f0xx_it.o
- .debug_ranges  0x00000000000006d8       0x18 Src/system_stm32f0xx.o
- .debug_ranges  0x00000000000006f0       0x10 Src/tft-board-specific.o
- .debug_ranges  0x0000000000000700       0x20 Startup/startup_stm32f072rbtx.o
+ .debug_ranges  0x0000000000000608       0x38 Src/main.o
+ .debug_ranges  0x0000000000000640       0x30 Src/stm32f0xx_hal_msp.o
+ .debug_ranges  0x0000000000000670       0x30 Src/stm32f0xx_it.o
+ .debug_ranges  0x00000000000006a0       0x18 Src/system_stm32f0xx.o
+ .debug_ranges  0x00000000000006b8       0x48 Src/tft-display-code/gfx.o
+ .debug_ranges  0x0000000000000700       0x38 Src/tft-display-code/hspi.o
+ .debug_ranges  0x0000000000000738       0x10 Src/tft-display-code/tft-board-specific.o
+ .debug_ranges  0x0000000000000748       0x20 Startup/startup_stm32f072rbtx.o
 
-.debug_macro    0x0000000000000000    0x16d0e
+.debug_macro    0x0000000000000000    0x18652
  .debug_macro   0x0000000000000000      0x32c Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
  .debug_macro   0x000000000000032c      0xa48 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
  .debug_macro   0x0000000000000d74       0xb1 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
@@ -4551,16 +4707,29 @@ OUTPUT(TFT_Test.elf elf32-littlearm)
  .debug_macro   0x0000000000015031      0x31a Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o
  .debug_macro   0x000000000001534b      0x310 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o
  .debug_macro   0x000000000001565b      0x310 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.o
- .debug_macro   0x000000000001596b      0x32a Src/hspi.o
- .debug_macro   0x0000000000015c95       0x70 Src/hspi.o
- .debug_macro   0x0000000000015d05       0x70 Src/hspi.o
- .debug_macro   0x0000000000015d75      0x32f Src/main.o
- .debug_macro   0x00000000000160a4      0x317 Src/stm32f0xx_hal_msp.o
- .debug_macro   0x00000000000163bb      0x321 Src/stm32f0xx_it.o
- .debug_macro   0x00000000000166dc      0x308 Src/system_stm32f0xx.o
- .debug_macro   0x00000000000169e4      0x32a Src/tft-board-specific.o
+ .debug_macro   0x000000000001596b      0x333 Src/main.o
+ .debug_macro   0x0000000000015c9e      0xb1a Src/main.o
+ .debug_macro   0x00000000000167b8       0x1c Src/main.o
+ .debug_macro   0x00000000000167d4       0x3a Src/main.o
+ .debug_macro   0x000000000001680e      0x30d Src/main.o
+ .debug_macro   0x0000000000016b1b       0x34 Src/main.o
+ .debug_macro   0x0000000000016b4f       0x97 Src/main.o
+ .debug_macro   0x0000000000016be6      0x353 Src/main.o
+ .debug_macro   0x0000000000016f39      0x104 Src/main.o
+ .debug_macro   0x000000000001703d       0x43 Src/main.o
+ .debug_macro   0x0000000000017080      0x137 Src/main.o
+ .debug_macro   0x00000000000171b7       0x70 Src/main.o
+ .debug_macro   0x0000000000017227       0x82 Src/main.o
+ .debug_macro   0x00000000000172a9      0x311 Src/stm32f0xx_hal_msp.o
+ .debug_macro   0x00000000000175ba      0x31b Src/stm32f0xx_it.o
+ .debug_macro   0x00000000000178d5      0x308 Src/system_stm32f0xx.o
+ .debug_macro   0x0000000000017bdd      0x341 Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000017f1e       0x7c Src/tft-display-code/gfx.o
+ .debug_macro   0x0000000000017f9a      0x324 Src/tft-display-code/hspi.o
+ .debug_macro   0x00000000000182be       0x70 Src/tft-display-code/hspi.o
+ .debug_macro   0x000000000001832e      0x324 Src/tft-display-code/tft-board-specific.o
 
-.debug_line     0x0000000000000000     0x8aed
+.debug_line     0x0000000000000000     0x9528
  .debug_line    0x0000000000000000      0x997 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
  .debug_line    0x0000000000000997      0x9e9 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o
  .debug_line    0x0000000000001380      0x9b2 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o
@@ -4568,42 +4737,45 @@ OUTPUT(TFT_Test.elf elf32-littlearm)
  .debug_line    0x00000000000027dc      0xa72 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o
  .debug_line    0x000000000000324e     0x127d Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o
  .debug_line    0x00000000000044cb     0x11f0 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.o
- .debug_line    0x00000000000056bb      0x926 Src/hspi.o
- .debug_line    0x0000000000005fe1      0x8fa Src/main.o
- .debug_line    0x00000000000068db      0x884 Src/stm32f0xx_hal_msp.o
- .debug_line    0x000000000000715f      0x872 Src/stm32f0xx_it.o
- .debug_line    0x00000000000079d1      0x84c Src/system_stm32f0xx.o
- .debug_line    0x000000000000821d      0x84b Src/tft-board-specific.o
- .debug_line    0x0000000000008a68       0x85 Startup/startup_stm32f072rbtx.o
+ .debug_line    0x00000000000056bb      0x919 Src/main.o
+ .debug_line    0x0000000000005fd4      0x884 Src/stm32f0xx_hal_msp.o
+ .debug_line    0x0000000000006858      0x872 Src/stm32f0xx_it.o
+ .debug_line    0x00000000000070ca      0x84c Src/system_stm32f0xx.o
+ .debug_line    0x0000000000007916      0x9cc Src/tft-display-code/gfx.o
+ .debug_line    0x00000000000082e2      0x93a Src/tft-display-code/hspi.o
+ .debug_line    0x0000000000008c1c      0x887 Src/tft-display-code/tft-board-specific.o
+ .debug_line    0x00000000000094a3       0x85 Startup/startup_stm32f072rbtx.o
 
-.debug_str      0x0000000000000000    0x77c0a
- .debug_str     0x0000000000000000    0x759d7 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
+.debug_str      0x0000000000000000    0x78921
+ .debug_str     0x0000000000000000    0x759a9 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
                                       0x75cc2 (size before relaxing)
- .debug_str     0x00000000000759d7      0x220 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o
+ .debug_str     0x00000000000759a9      0x220 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o
                                       0x75bac (size before relaxing)
- .debug_str     0x0000000000075bf7      0x294 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o
+ .debug_str     0x0000000000075bc9      0x268 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o
                                       0x75a3c (size before relaxing)
- .debug_str     0x0000000000075e8b      0x350 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.o
+ .debug_str     0x0000000000075e31      0x317 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.o
                                       0x75b84 (size before relaxing)
- .debug_str     0x00000000000761db      0x3a9 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o
+ .debug_str     0x0000000000076148      0x390 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o
                                       0x75b8c (size before relaxing)
- .debug_str     0x0000000000076584      0x8ee Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o
+ .debug_str     0x00000000000764d8      0x85f Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o
                                       0x76099 (size before relaxing)
- .debug_str     0x0000000000076e72      0x881 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.o
+ .debug_str     0x0000000000076d37      0x81e Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.o
                                       0x762cd (size before relaxing)
- .debug_str     0x00000000000776f3      0x34f Src/hspi.o
-                                      0x75aab (size before relaxing)
- .debug_str     0x0000000000077a42       0xa6 Src/main.o
-                                      0x7620c (size before relaxing)
- .debug_str     0x0000000000077ae8       0x1b Src/stm32f0xx_hal_msp.o
-                                      0x75fcb (size before relaxing)
- .debug_str     0x0000000000077b03       0x71 Src/stm32f0xx_it.o
-                                      0x758f1 (size before relaxing)
- .debug_str     0x0000000000077b74       0x3b Src/system_stm32f0xx.o
+ .debug_str     0x0000000000077555      0xf95 Src/main.o
+                                      0x76caa (size before relaxing)
+ .debug_str     0x00000000000784ea       0x1b Src/stm32f0xx_hal_msp.o
+                                      0x75fd2 (size before relaxing)
+ .debug_str     0x0000000000078505       0x71 Src/stm32f0xx_it.o
+                                      0x758f8 (size before relaxing)
+ .debug_str     0x0000000000078576       0x3b Src/system_stm32f0xx.o
                                       0x75795 (size before relaxing)
- .debug_str     0x0000000000077baf       0x2a Src/tft-board-specific.o
-                                      0x75a26 (size before relaxing)
- .debug_str     0x0000000000077bd9       0x31 Startup/startup_stm32f072rbtx.o
+ .debug_str     0x00000000000785b1      0x11b Src/tft-display-code/gfx.o
+                                      0x7629d (size before relaxing)
+ .debug_str     0x00000000000786cc      0x1be Src/tft-display-code/hspi.o
+                                      0x75ac6 (size before relaxing)
+ .debug_str     0x000000000007888a       0x66 Src/tft-display-code/tft-board-specific.o
+                                      0x75a69 (size before relaxing)
+ .debug_str     0x00000000000788f0       0x31 Startup/startup_stm32f072rbtx.o
                                          0x62 (size before relaxing)
 
 .comment        0x0000000000000000       0x7b
@@ -4615,14 +4787,15 @@ OUTPUT(TFT_Test.elf elf32-littlearm)
  .comment       0x000000000000007b       0x7c Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o
  .comment       0x000000000000007b       0x7c Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o
  .comment       0x000000000000007b       0x7c Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.o
- .comment       0x000000000000007b       0x7c Src/hspi.o
  .comment       0x000000000000007b       0x7c Src/main.o
  .comment       0x000000000000007b       0x7c Src/stm32f0xx_hal_msp.o
  .comment       0x000000000000007b       0x7c Src/stm32f0xx_it.o
  .comment       0x000000000000007b       0x7c Src/system_stm32f0xx.o
- .comment       0x000000000000007b       0x7c Src/tft-board-specific.o
+ .comment       0x000000000000007b       0x7c Src/tft-display-code/gfx.o
+ .comment       0x000000000000007b       0x7c Src/tft-display-code/hspi.o
+ .comment       0x000000000000007b       0x7c Src/tft-display-code/tft-board-specific.o
 
-.debug_frame    0x0000000000000000     0x1aec
+.debug_frame    0x0000000000000000     0x1c18
  .debug_frame   0x0000000000000000      0x248 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
  .debug_frame   0x0000000000000248      0x2a0 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o
  .debug_frame   0x00000000000004e8      0x110 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.o
@@ -4630,12 +4803,13 @@ OUTPUT(TFT_Test.elf elf32-littlearm)
  .debug_frame   0x000000000000078c      0x180 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.o
  .debug_frame   0x000000000000090c      0x710 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.o
  .debug_frame   0x000000000000101c      0x710 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.o
- .debug_frame   0x000000000000172c       0xc8 Src/hspi.o
- .debug_frame   0x00000000000017f4       0xc8 Src/main.o
- .debug_frame   0x00000000000018bc       0xb0 Src/stm32f0xx_hal_msp.o
- .debug_frame   0x000000000000196c       0x9c Src/stm32f0xx_it.o
- .debug_frame   0x0000000000001a08       0x4c Src/system_stm32f0xx.o
- .debug_frame   0x0000000000001a54       0x2c Src/tft-board-specific.o
- .debug_frame   0x0000000000001a80       0x2c /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
- .debug_frame   0x0000000000001aac       0x20 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-memset.o)
- .debug_frame   0x0000000000001acc       0x20 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o)
+ .debug_frame   0x000000000000172c       0xcc Src/main.o
+ .debug_frame   0x00000000000017f8       0xb0 Src/stm32f0xx_hal_msp.o
+ .debug_frame   0x00000000000018a8       0x9c Src/stm32f0xx_it.o
+ .debug_frame   0x0000000000001944       0x4c Src/system_stm32f0xx.o
+ .debug_frame   0x0000000000001990      0x128 Src/tft-display-code/gfx.o
+ .debug_frame   0x0000000000001ab8       0xc8 Src/tft-display-code/hspi.o
+ .debug_frame   0x0000000000001b80       0x2c Src/tft-display-code/tft-board-specific.o
+ .debug_frame   0x0000000000001bac       0x2c /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000000000001bd8       0x20 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000001bf8       0x20 /opt/st/stm32cubeide_1.0.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o)

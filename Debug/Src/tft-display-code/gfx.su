@@ -1,0 +1,8 @@
+gfx.cpp:37:1:TFT_GFX::TFT_GFX(SPI_TypeDef*)	16	static
+gfx.cpp:41:6:void TFT_GFX::setAddrWindow(uint16_t, uint16_t, uint16_t, uint16_t)	48	static
+gfx.cpp:59:6:void TFT_GFX::writePixel(int16_t, int16_t, uint16_t)	40	static
+gfx.cpp:68:6:void TFT_GFX::writeFillRect(int16_t, int16_t, int16_t, int16_t, uint16_t)	48	static
+gfx.cpp:98:13:void TFT_GFX::writeFillRectPreclipped(int16_t, int16_t, int16_t, int16_t, uint16_t)	40	static
+gfx.cpp:104:6:void TFT_GFX::writeColor(uint16_t, uint32_t)	32	static
+gfx.cpp:110:13:void TFT_GFX::writeFastVLine(int16_t, int16_t, int16_t, uint16_t)	48	static
+gfx.cpp:147:6:void TFT_GFX::drawChar(int16_t, int16_t, unsigned char, uint16_t, uint16_t, uint8_t, uint8_t)	56	static

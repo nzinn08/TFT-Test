@@ -1,5 +1,7 @@
-Src/main.o: ../Src/main.cpp ../Inc/main.h \
- ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h \
+Src/tft-display-code/gfx.o: \
+ /home/nzinn/STM32CubeIDE/workspace_1.0.1/TFT_Test/tft-display-code/gfx.cpp \
+ /home/nzinn/STM32CubeIDE/workspace_1.0.1/TFT_Test/tft-display-code/gfx.h \
+ ../Inc/main.h ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h \
  ../Inc/stm32f0xx_hal_conf.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h \
@@ -26,8 +28,9 @@ Src/main.o: ../Src/main.cpp ../Inc/main.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h \
- ../tft-display-code/tft-board-specific.h ../tft-display-code/hspi.h \
- ../tft-display-code/gfx.h
+ /home/nzinn/STM32CubeIDE/workspace_1.0.1/TFT_Test/tft-display-code/hspi.h
+
+/home/nzinn/STM32CubeIDE/workspace_1.0.1/TFT_Test/tft-display-code/gfx.h:
 
 ../Inc/main.h:
 
@@ -85,8 +88,4 @@ Src/main.o: ../Src/main.cpp ../Inc/main.h \
 
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h:
 
-../tft-display-code/tft-board-specific.h:
-
-../tft-display-code/hspi.h:
-
-../tft-display-code/gfx.h:
+/home/nzinn/STM32CubeIDE/workspace_1.0.1/TFT_Test/tft-display-code/hspi.h:

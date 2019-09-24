@@ -34,6 +34,10 @@ namespace{
 //Private Function Definitions
 
 //Public Function Definitions
+TFT_GFX::TFT_GFX(SPI_TypeDef *SPIx):
+spiInstance{SPIx}
+{}
+
 void TFT_GFX::setAddrWindow(uint16_t x1, uint16_t y1, uint16_t w, uint16_t h)
 {
     uint16_t x2 = (x1 + w - 1);
@@ -98,7 +102,7 @@ inline void TFT_GFX::writeFillRectPreclipped(int16_t x, int16_t y,
 }
 
 void TFT_GFX::writeColor(uint16_t color, uint32_t len){
-	for(int i = 0; i < len; i++){
+	for(uint32_t i = 0; i < len; i++){
 		hspi_w16(this->spiInstance, color);
 	}
 }
