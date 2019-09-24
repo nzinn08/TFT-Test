@@ -127,6 +127,19 @@ void inline writeFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color);
     @param  color  16-bit line color in '565' RGB format.
 */
 void inline writeFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color);
+/**************************************************************************/
+/*!
+   @brief   Draw a single character
+    @param    x   Bottom left corner x coordinate
+    @param    y   Bottom left corner y coordinate
+    @param    c   The 8-bit font-indexed character (likely ascii)
+    @param    color 16-bit 5-6-5 Color to draw chraracter with
+    @param    bg 16-bit 5-6-5 Color to fill background with (if same as color, no background)
+    @param    size_x  Font magnification level in X-axis, 1 is 'original' size
+    @param    size_y  Font magnification level in Y-axis, 1 is 'original' size
+*/
+/**************************************************************************/
+void drawChar(int16_t x, int16_t y, unsigned char c, uint16_t color, uint16_t bg, uint8_t size_x, uint8_t size_y);
 //Public Constants
 static constexpr uint16_t TFT_WIDTH = 240;
 static constexpr uint16_t TFT_HEIGHT = 320;
