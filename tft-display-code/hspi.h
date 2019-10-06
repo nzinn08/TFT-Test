@@ -14,6 +14,10 @@ void hspi_w8(SPI_TypeDef *SPIx, uint8_t dat);
 void hspi_w16(SPI_TypeDef *SPIx, uint16_t dat);
 void hspi_cmd(SPI_TypeDef *SPIx, uint8_t cmd);
 void ili9341_hspi_init(SPI_TypeDef *SPIx);
+/**
+ * @brief This function resets the TFT board and starts it back up again
+ */
+void resetTftBoard(void);
 
 #ifdef __cplusplus
 }

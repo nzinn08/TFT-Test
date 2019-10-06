@@ -40,11 +40,6 @@
 			<location>/home/nzinn/Documents/Senior-Test/TFT-Test/Inc/pin-definitions.h</location>
 		</link>
 		<link>
-			<name>Src/hspi.c</name>
-			<type>1</type>
-			<location>/home/nzinn/Documents/Senior-Test/TFT-Test/Src/hspi.c</location>
-		</link>
-		<link>
 			<name>Src/tft-display-code</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
@@ -73,16 +68,6 @@
 			<name>Src/tft-display-code/pin-definitions.h</name>
 			<type>1</type>
 			<locationURI>PROJECT_LOC/tft-display-code/pin-definitions.h</locationURI>
-		</link>
-		<link>
-			<name>Src/tft-display-code/tft-board-specific.c</name>
-			<type>1</type>
-			<locationURI>PROJECT_LOC/tft-display-code/tft-board-specific.c</locationURI>
-		</link>
-		<link>
-			<name>Src/tft-display-code/tft-board-specific.h</name>
-			<type>1</type>
-			<locationURI>PROJECT_LOC/tft-display-code/tft-board-specific.h</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -12,6 +12,8 @@
 extern "C" {
 #endif
 //Public Defines
+#define ILI9341_TFTWIDTH   240      ///< ILI9341 max TFT width
+#define ILI9341_TFTHEIGHT  320      ///< ILI9341 max TFT height
 // Color definitions
 #define ILI9341_BLACK       0x0000  ///<   0,   0,   0
 #define ILI9341_NAVY        0x000F  ///<   0,   0, 123
@@ -162,13 +164,22 @@ void inline writeFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color);
 */
 /**************************************************************************/
 void drawChar(int16_t x, int16_t y, unsigned char c, uint16_t color, uint16_t bg, uint8_t size_x, uint8_t size_y);
+/**
+ * @brief Gets the current width of the TFT display
+ */
+uint16_t width(void);
+/**
+ * @brief Gets the current height of the TFT display
+ */
+uint16_t height(void);
 //Public Constants
-static constexpr uint16_t TFT_WIDTH = 240;
-static constexpr uint16_t TFT_HEIGHT = 320;
 //Public Variable
 private:
 //Private Variables
 SPI_TypeDef* spiInstance;
+//This is not the same as TFT_WIDTH and TFT_HEIGHT due to the fact we can rotate the screen
+uint16_t _width;
+uint16_t _height;
 //Private Function Prototypes
 };
 

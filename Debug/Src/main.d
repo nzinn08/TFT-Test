@@ -26,8 +26,7 @@ Src/main.o: ../Src/main.cpp ../Inc/main.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h \
- ../tft-display-code/tft-board-specific.h ../tft-display-code/hspi.h \
- ../tft-display-code/gfx.h
+ ../tft-display-code/hspi.h ../tft-display-code/gfx.h
 
 ../Inc/main.h:
 
@@ -84,8 +83,6 @@ Src/main.o: ../Src/main.cpp ../Inc/main.h \
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h:
 
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h:
-
-../tft-display-code/tft-board-specific.h:
 
 ../tft-display-code/hspi.h:
 

@@ -6,3 +6,5 @@ gfx.cpp:98:13:void TFT_GFX::writeFillRectPreclipped(int16_t, int16_t, int16_t, i
 gfx.cpp:104:6:void TFT_GFX::writeColor(uint16_t, uint32_t)	32	static
 gfx.cpp:110:13:void TFT_GFX::writeFastVLine(int16_t, int16_t, int16_t, uint16_t)	48	static
 gfx.cpp:147:6:void TFT_GFX::drawChar(int16_t, int16_t, unsigned char, uint16_t, uint16_t, uint8_t, uint8_t)	56	static
+gfx.cpp:181:10:uint16_t TFT_GFX::width()	16	static
+gfx.cpp:186:10:uint16_t TFT_GFX::height()	16	static

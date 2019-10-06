@@ -23,7 +23,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "tft-board-specific.h"
 #include "hspi.h"
 #include "gfx.h"
 /* USER CODE END Includes */
@@ -100,24 +99,24 @@ int main(void)
   /* USER CODE BEGIN 2 */
   TFT_GFX tftDisplay(hspi2.Instance);
   //Set background to black
-  tftDisplay.setAddrWindow(0, 0, TFT_GFX::TFT_WIDTH, TFT_GFX::TFT_HEIGHT);
-  tftDisplay.writeColor(ILI9341_SADDLEBROWN, TFT_GFX::TFT_HEIGHT * TFT_GFX::TFT_WIDTH);
+  tftDisplay.setAddrWindow(0, 0, tftDisplay.width(), tftDisplay.height());
+  tftDisplay.writeColor(ILI9341_SADDLEBROWN, tftDisplay.height() * tftDisplay.width());
   //Draw on the background
   uint16_t x_inc = 20;
   int16_t init_x = 30;
   uint16_t displayColor = ILI9341_GREENYELLOW;
-  tftDisplay.drawChar(init_x += x_inc, TFT_GFX::TFT_HEIGHT/4.0, 'A', displayColor, displayColor, 5, 5);
-  tftDisplay.drawChar(init_x += x_inc, TFT_GFX::TFT_HEIGHT/4.0, 'l', displayColor, displayColor, 5, 5);
-  tftDisplay.drawChar(init_x += x_inc, TFT_GFX::TFT_HEIGHT/4.0, 'e', displayColor, displayColor, 5, 5);
-  tftDisplay.drawChar(init_x += x_inc, TFT_GFX::TFT_HEIGHT/4.0, 'x', displayColor, displayColor, 5, 5);
-  tftDisplay.drawChar(init_x += x_inc, TFT_GFX::TFT_HEIGHT/4.0, ' ', displayColor, displayColor, 5, 5);
-  tftDisplay.drawChar(init_x += x_inc, TFT_GFX::TFT_HEIGHT/4.0, 'i', displayColor, displayColor, 5, 5);
-  tftDisplay.drawChar(init_x += x_inc, TFT_GFX::TFT_HEIGHT/4.0, 's', displayColor, displayColor, 5, 5);
+  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, 'A', displayColor, displayColor, 5, 5);
+  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, 'l', displayColor, displayColor, 5, 5);
+  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, 'e', displayColor, displayColor, 5, 5);
+  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, 'x', displayColor, displayColor, 5, 5);
+  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, ' ', displayColor, displayColor, 5, 5);
+  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, 'i', displayColor, displayColor, 5, 5);
+  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, 'x', displayColor, displayColor, 5, 5);
   x_inc = 60;
   init_x = -20;
-  tftDisplay.drawChar(init_x += x_inc, 2*(TFT_GFX::TFT_HEIGHT/4.0), 'G', displayColor, displayColor, 10, 10);
-  tftDisplay.drawChar(init_x += x_inc, 2*(TFT_GFX::TFT_HEIGHT/4.0), 'A', displayColor, displayColor, 10, 10);
-  tftDisplay.drawChar(init_x += x_inc, 2*(TFT_GFX::TFT_HEIGHT/4.0), 'Y', displayColor, displayColor, 10, 10);
+  tftDisplay.drawChar(init_x += x_inc, 2*(tftDisplay.height()/4.0), 'G', displayColor, displayColor, 10, 10);
+  tftDisplay.drawChar(init_x += x_inc, 2*(tftDisplay.height()/4.0), 'A', displayColor, displayColor, 10, 10);
+  tftDisplay.drawChar(init_x += x_inc, 2*(tftDisplay.height()/4.0), 'Y', displayColor, displayColor, 10, 10);
   /* USER CODE END 2 */
 
   /* Infinite loop */

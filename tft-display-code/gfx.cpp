@@ -35,7 +35,7 @@ namespace{
 
 //Public Function Definitions
 TFT_GFX::TFT_GFX(SPI_TypeDef *SPIx):
-spiInstance{SPIx}
+spiInstance{SPIx}, _width{ILI9341_TFTWIDTH}, _height{ILI9341_TFTHEIGHT}
 {}
 
 void TFT_GFX::setAddrWindow(uint16_t x1, uint16_t y1, uint16_t w, uint16_t h)
@@ -58,7 +58,7 @@ void TFT_GFX::setAddrWindow(uint16_t x1, uint16_t y1, uint16_t w, uint16_t h)
 
 void TFT_GFX::writePixel(int16_t x, int16_t y, uint16_t color) 
 {
-    if((x >= 0) && (x < TFT_WIDTH) && (y >= 0) && (y < TFT_HEIGHT)) 
+    if((x >= 0) && (x < this->_width) && (y >= 0) && (y < this->_height)) 
     {
         setAddrWindow(x, y, 1, 1);
         hspi_w16(this->spiInstance, color);
@@ -72,12 +72,12 @@ void TFT_GFX::writeFillRect(int16_t x, int16_t y,
             x +=  w + 1;                    //   Move X to left edge
             w  = -w;                        //   Use positive width
         }
-        if(x < TFT_WIDTH) {                    // Not off right
+        if(x < this->_width) {                    // Not off right
             if(h < 0) {                     // If negative height...
                 y +=  h + 1;                //   Move Y to top edge
                 h  = -h;                    //   Use positive height
             }
-            if(y < TFT_HEIGHT) {               // Not off bottom
+            if(y < this->_height) {               // Not off bottom
                 int16_t x2 = x + w - 1;
                 if(x2 >= 0) {               // Not off left
                     int16_t y2 = y + h - 1;
@@ -85,8 +85,8 @@ void TFT_GFX::writeFillRect(int16_t x, int16_t y,
                         // Rectangle partly or fully overlaps screen
                         if(x  <  0)       { x = 0; w = x2 + 1; } // Clip left
                         if(y  <  0)       { y = 0; h = y2 + 1; } // Clip top
-                        if(x2 >= TFT_WIDTH)  { w = TFT_WIDTH  - x;   } // Clip right
-                        if(y2 >= TFT_HEIGHT) { h = TFT_HEIGHT - y;   } // Clip bottom
+                        if(x2 >= this->_width)  { w = this->_width  - x;   } // Clip right
+                        if(y2 >= this->_height) { h = this->_height - y;   } // Clip bottom
                         writeFillRectPreclipped(x, y, w, h, color);
                     }
                 }
@@ -108,17 +108,17 @@ void TFT_GFX::writeColor(uint16_t color, uint32_t len){
 }
 
 void inline TFT_GFX::writeFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color) {
-    if((x >= 0) && (x < TFT_WIDTH) && h) { // X on screen, nonzero height
+    if((x >= 0) && (x < this->_width) && h) { // X on screen, nonzero height
         if(h < 0) {                     // If negative height...
             y +=  h + 1;                //   Move Y to top edge
             h  = -h;                    //   Use positive height
         }
-        if(y < TFT_HEIGHT) {               // Not off bottom
+        if(y < this->_height) {               // Not off bottom
             int16_t y2 = y + h - 1;
             if(y2 >= 0) {               // Not off top
                 // Line partly or fully overlaps screen
                 if(y  <  0)       { y = 0; h = y2 + 1; } // Clip top
-                if(y2 >= TFT_HEIGHT) { h = TFT_HEIGHT - y;   } // Clip bottom
+                if(y2 >= this->_height) { h = this->_height - y;   } // Clip bottom
                 writeFillRectPreclipped(x, y, 1, h, color);
             }
         }
@@ -127,17 +127,17 @@ void inline TFT_GFX::writeFastVLine(int16_t x, int16_t y, int16_t h, uint16_t co
 
 void inline TFT_GFX::writeFastHLine(int16_t x, int16_t y, int16_t w,
   uint16_t color) {
-    if((y >= 0) && (y < TFT_HEIGHT) && w) { // Y on screen, nonzero width
+    if((y >= 0) && (y < this->_height) && w) { // Y on screen, nonzero width
         if(w < 0) {                      // If negative width...
             x +=  w + 1;                 //   Move X to left edge
             w  = -w;                     //   Use positive width
         }
-        if(x < TFT_WIDTH) {                 // Not off right
+        if(x < this->_width) {                 // Not off right
             int16_t x2 = x + w - 1;
             if(x2 >= 0) {                // Not off left
                 // Line partly or fully overlaps screen
                 if(x  <  0)       { x = 0; w = x2 + 1; } // Clip left
-                if(x2 >= TFT_WIDTH)  { w = TFT_WIDTH  - x;   } // Clip right
+                if(x2 >= this->_width)  { w = this->_width  - x;   } // Clip right
                 writeFillRectPreclipped(x, y, w, 1, color);
             }
         }
@@ -146,8 +146,8 @@ void inline TFT_GFX::writeFastHLine(int16_t x, int16_t y, int16_t w,
 
 void TFT_GFX::drawChar(int16_t x, int16_t y, unsigned char c, uint16_t color, uint16_t bg, uint8_t size_x, uint8_t size_y) 
 {
-    if((x >= TFT_WIDTH)            || // Clip right
-        (y >= TFT_HEIGHT)           || // Clip bottom
+    if((x >= this->_width)            || // Clip right
+        (y >= this->_height)           || // Clip bottom
         ((x + 6 * size_x - 1) < 0) || // Clip left
         ((y + 8 * size_y - 1) < 0))   // Clip top
         return;
@@ -178,6 +178,15 @@ void TFT_GFX::drawChar(int16_t x, int16_t y, unsigned char c, uint16_t color, ui
     //endWrite();
 }
 
+uint16_t TFT_GFX::width(void)
+{
+	return this->_width;
+}
+
+uint16_t TFT_GFX::height(void)
+{
+	return this->_height;
+}
 // Standard ASCII 5x7 font
 namespace {
 const unsigned char font[] = {
