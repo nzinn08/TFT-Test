@@ -98,11 +98,27 @@ int main(void)
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
   TFT_GFX tftDisplay(hspi2.Instance);
+  const uint16_t backgroundColor = ILI9341_BLACK;
+  const uint16_t fontColor = ILI9341_GREENYELLOW;
+  const uint16_t lineColor = ILI9341_ORANGE;
+  const uint16_t lineThickness = 8;
+  const uint16_t numBoxes = 5;
   tftDisplay.setRotation(3);
-  //Set background to black
+  //Set background to correct color
   tftDisplay.setAddrWindow(0, 0, tftDisplay.width(), tftDisplay.height());
-  tftDisplay.writeColor(ILI9341_SADDLEBROWN, tftDisplay.height() * tftDisplay.width());
+  tftDisplay.writeColor(backgroundColor, tftDisplay.height() * tftDisplay.width());
+  //Draw the GUI lines
+  tftDisplay.writeFillRect((tftDisplay.width()-lineThickness)/2, 0, lineThickness, tftDisplay.height(), lineColor);
+  for(uint16_t i = 1; i < numBoxes; i++)
+  {
+	  tftDisplay.writeFillRect(0, i*(tftDisplay.height()/numBoxes) - lineThickness/2, tftDisplay.width()/2, lineThickness, lineColor);
+  }
+
+
+
+  //TESTING STUFF
   //Draw on the background
+  /*
   uint16_t x_inc = 20;
   int16_t init_x = 30;
   uint16_t displayColor = ILI9341_GREENYELLOW;
@@ -118,10 +134,7 @@ int main(void)
   tftDisplay.drawChar(init_x += x_inc, 2*(tftDisplay.height()/4.0), 'G', displayColor, displayColor, 10, 10);
   tftDisplay.drawChar(init_x += x_inc, 2*(tftDisplay.height()/4.0), 'A', displayColor, displayColor, 10, 10);
   tftDisplay.drawChar(init_x += x_inc, 2*(tftDisplay.height()/4.0), 'Y', displayColor, displayColor, 10, 10);
-
-  //tftDisplay.writeFastVLine(tftDisplay.width()/2.0, 0, tftDisplay.height(), ILI9341_CYAN);
-  tftDisplay.setAddrWindow(tftDisplay.width()/2.0, 0, 10, tftDisplay.height());
-  tftDisplay.writeFillRect(tftDisplay.width()/2.0, 0, 10, tftDisplay.height(), ILI9341_CYAN);
+  */
   /* USER CODE END 2 */
 
   /* Infinite loop */

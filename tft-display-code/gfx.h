@@ -175,6 +175,20 @@ void inline writeFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color);
 void drawChar(int16_t x, int16_t y, unsigned char c, uint16_t color, uint16_t bg, uint8_t size_x, uint8_t size_y);
 /**************************************************************************/
 /*!
+   @brief   Draw a single character
+    @param    init_x   Bottom left corner x coordinate of first char
+    @param    init_y   Bottom left corner y coordinate of first char
+    @param    s   Null-terminated ASCII string (max length is MAX_STRING_LENGTH characters)
+    @param    color 16-bit 5-6-5 Color to draw chraracter with
+    @param    bg 16-bit 5-6-5 Color to fill background with (if same as color, no background)
+    @param    size_x  Font magnification level in X-axis, 1 is 'original' size
+    @param    size_y  Font magnification level in Y-axis, 1 is 'original' size
+    @retval   Returns the size of @s
+*/
+/**************************************************************************/
+uint8_t drawString(int16_t init_x, int16_t init_y, const char* s, uint16_t color, uint16_t bg, uint8_t size_x, uint8_t size_y, bool do_wrap = false);
+/**************************************************************************/
+/*!
     @brief   Set origin of (0,0) and orientation of TFT display
     @param   m  The index for rotation, from 0-3 inclusive
 */
@@ -191,6 +205,8 @@ uint16_t height(void);
 //Public Constants
 //Public Variable
 private:
+//Private Constants
+static constexpr uint8_t MAX_STRING_LENGTH = 30;
 //Private Variables
 SPI_TypeDef* spiInstance;
 //This is not the same as TFT_WIDTH and TFT_HEIGHT due to the fact we can rotate the screen

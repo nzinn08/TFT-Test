@@ -178,6 +178,26 @@ void TFT_GFX::drawChar(int16_t x, int16_t y, unsigned char c, uint16_t color, ui
     //endWrite();
 }
 
+uint8_t TFT_GFX::drawString(int16_t init_x, int16_t init_y, const char* s, uint16_t color, uint16_t bg, uint8_t size_x, uint8_t size_y, bool do_wrap)
+{
+	uint8_t counter = 0;
+	uint16_t currX = init_x;
+	uint16_t currY = init_y;
+	while(s && counter < TFT_GFX::MAX_STRING_LENGTH)
+	{
+		drawChar(currX,currY,*(s++),color,bg,size_x,size_y);
+		currX += size_x * 6;
+		//This handles wrapping text
+		if(do_wrap && (currX + (size_x * 6) > this->_width))
+		{
+			currX = init_x;
+			currY += size_y * 8;
+		}
+		counter++;
+	}
+	return counter;
+}
+
 void TFT_GFX::setRotation(uint8_t m)
 {
 	uint8_t rotation = m % 4; // can't be higher than 3
