@@ -98,6 +98,7 @@ int main(void)
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
   TFT_GFX tftDisplay(hspi2.Instance);
+  tftDisplay.setRotation(3);
   //Set background to black
   tftDisplay.setAddrWindow(0, 0, tftDisplay.width(), tftDisplay.height());
   tftDisplay.writeColor(ILI9341_SADDLEBROWN, tftDisplay.height() * tftDisplay.width());
@@ -117,6 +118,10 @@ int main(void)
   tftDisplay.drawChar(init_x += x_inc, 2*(tftDisplay.height()/4.0), 'G', displayColor, displayColor, 10, 10);
   tftDisplay.drawChar(init_x += x_inc, 2*(tftDisplay.height()/4.0), 'A', displayColor, displayColor, 10, 10);
   tftDisplay.drawChar(init_x += x_inc, 2*(tftDisplay.height()/4.0), 'Y', displayColor, displayColor, 10, 10);
+
+  //tftDisplay.writeFastVLine(tftDisplay.width()/2.0, 0, tftDisplay.height(), ILI9341_CYAN);
+  tftDisplay.setAddrWindow(tftDisplay.width()/2.0, 0, 10, tftDisplay.height());
+  tftDisplay.writeFillRect(tftDisplay.width()/2.0, 0, 10, tftDisplay.height(), ILI9341_CYAN);
   /* USER CODE END 2 */
 
   /* Infinite loop */

@@ -178,6 +178,34 @@ void TFT_GFX::drawChar(int16_t x, int16_t y, unsigned char c, uint16_t color, ui
     //endWrite();
 }
 
+void TFT_GFX::setRotation(uint8_t m)
+{
+	uint8_t rotation = m % 4; // can't be higher than 3
+	    switch (rotation) {
+	        case 0:
+	            m = (MADCTL_MX | MADCTL_BGR);
+	            _width  = ILI9341_TFTWIDTH;
+	            _height = ILI9341_TFTHEIGHT;
+	            break;
+	        case 1:
+	            m = (MADCTL_MV | MADCTL_BGR);
+	            _width  = ILI9341_TFTHEIGHT;
+	            _height = ILI9341_TFTWIDTH;
+	            break;
+	        case 2:
+	            m = (MADCTL_MY | MADCTL_BGR);
+	            _width  = ILI9341_TFTWIDTH;
+	            _height = ILI9341_TFTHEIGHT;
+	            break;
+	        case 3:
+	            m = (MADCTL_MX | MADCTL_MY | MADCTL_MV | MADCTL_BGR);
+	            _width  = ILI9341_TFTHEIGHT;
+	            _height = ILI9341_TFTWIDTH;
+	            break;
+	    }
+	    sendCommand(this->spiInstance, ILI9341_MADCTL, &m, 1);
+}
+
 uint16_t TFT_GFX::width(void)
 {
 	return this->_width;

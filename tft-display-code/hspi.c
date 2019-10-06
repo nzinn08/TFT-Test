@@ -43,6 +43,15 @@ void hspi_cmd(SPI_TypeDef *SPIx, uint8_t cmd) {
   TFT_DC_PORT->ODR |=  (1 << TFT_DC_PIN);
 }
 
+void sendCommand(SPI_TypeDef *SPIx, uint8_t cmd, uint8_t* data, uint8_t length)
+{
+	hspi_cmd(SPIx,cmd);
+	for(int i = 0; i < length; i++)
+	{
+		hspi_w8(SPIx, *(data++));
+	}
+}
+
 void ili9341_hspi_init(SPI_TypeDef *SPIx) {
   // (Display off)
   //hspi_cmd(SPIx, 0x28);
