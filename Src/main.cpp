@@ -25,6 +25,9 @@
 /* USER CODE BEGIN Includes */
 #include "hspi.h"
 #include "gfx.h"
+#include "text-box.h"
+#include "quarter-sorter-specific.h"
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -97,25 +100,47 @@ int main(void)
   MX_USART2_UART_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
-  TFT_GFX tftDisplay(hspi2.Instance);
+  TFT_GFX tftDisplay{hspi2.Instance};
   const uint16_t backgroundColor = ILI9341_BLACK;
   const uint16_t fontColor = ILI9341_GREENYELLOW;
   const uint16_t lineColor = ILI9341_ORANGE;
-  const uint16_t lineThickness = 8;
-  const uint16_t numBoxes = 5;
-  tftDisplay.setRotation(3);
-  //Set background to correct color
-  tftDisplay.setAddrWindow(0, 0, tftDisplay.width(), tftDisplay.height());
-  tftDisplay.writeColor(backgroundColor, tftDisplay.height() * tftDisplay.width());
+  const uint16_t lineThickness = 5;
+  const uint8_t chosenStatesFontSize = 2;
+  const uint8_t stateSelectorFontSize = 3;
+  constexpr uint16_t NUM_BOXES = 5;
+  tftDisplay.setRotation(0);
+  //Set background to correct color and add outline
+  tftDisplay.writeFillRect(0, 0, tftDisplay.width(), tftDisplay.height(), lineColor);
+  tftDisplay.writeFillRect(lineThickness, lineThickness, tftDisplay.width() - lineThickness * 2, tftDisplay.height() - lineThickness * 2, backgroundColor);
   //Draw the GUI lines
-  tftDisplay.writeFillRect((tftDisplay.width()-lineThickness)/2, 0, lineThickness, tftDisplay.height(), lineColor);
-  for(uint16_t i = 1; i < numBoxes; i++)
+  tftDisplay.writeFillRect(0,(tftDisplay.height()-lineThickness)/2, tftDisplay.width(), lineThickness, lineColor);
+  for(uint16_t i = 1; i < NUM_BOXES; i++)
   {
-	  tftDisplay.writeFillRect(0, i*(tftDisplay.height()/numBoxes) - lineThickness/2, tftDisplay.width()/2, lineThickness, lineColor);
+	  tftDisplay.writeFillRect(0, tftDisplay.height()/2 + i*(tftDisplay.height()/(2 *NUM_BOXES)) - lineThickness/2, tftDisplay.width(), lineThickness, lineColor);
   }
 
-
-
+  TFT_TEXT_BOX instructionBox{&tftDisplay,backgroundColor,lineThickness + 8, lineThickness + 8, tftDisplay.width() - lineThickness - 8, false};
+  uint16_t bottomInstructionBox = instructionBox.write("*Hold OK button for 3 seconds to confirm selection.", fontColor, 1);
+  TFT_TEXT_BOX mainTitle{&tftDisplay,backgroundColor,lineThickness + 8, bottomInstructionBox + 10, tftDisplay.width() - lineThickness - 8, false};
+  uint16_t bottomMainTitle = mainTitle.write("State Selection: ", fontColor, 2);
+  TFT_TEXT_BOX stateSelector{&tftDisplay, backgroundColor, lineThickness + 8, bottomMainTitle + 25,tftDisplay.width() - lineThickness - 8, true};
+  TFT_TEXT_BOX chosenStates[NUM_BOXES];
+  for(int i = 0; i < NUM_BOXES; i++)
+  {
+	  uint16_t yPos = tftDisplay.height()/2.0f + (float)(2*i+1)*tftDisplay.height()/(2.0f* NUM_BOXES * 2.0f) - (chosenStatesFontSize * 8.0f)/2;
+	  chosenStates[i] = TFT_TEXT_BOX{&tftDisplay, backgroundColor, lineThickness + 8, yPos,tftDisplay.width() - lineThickness - 8, false};
+  }
+  for(int i = 0; i < 50; i++)
+  {
+	  stateSelector.write(stateNames[i], fontColor, stateSelectorFontSize);
+	  for(int j = 0; j < NUM_BOXES; j++)
+	  {
+		  char chosenString[STATE_MAX_CHARS + 3 + 1];
+		  sprintf(chosenString, "%d: %s",j+1,stateNames[i]);
+		  chosenStates[j].write(chosenString, fontColor, chosenStatesFontSize);
+	  }
+	  HAL_Delay(1000);
+  }
   //TESTING STUFF
   //Draw on the background
   /*

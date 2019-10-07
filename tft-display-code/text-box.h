@@ -35,8 +35,9 @@ extern "C" {
 
 //C++ Interface
 //Class Definitions
-class TFT_TEXT_BOX: private TFT_GFX
+class TFT_TEXT_BOX
 {
+public:
 //Constructors
 /**
  * @brief Constructor to initialize x and y position as well as pass spi instance
@@ -44,21 +45,22 @@ class TFT_TEXT_BOX: private TFT_GFX
  * @param bg_color: This is the background color this text box will be on top of
  * @param x_pos: x position of bottom left corner of text box
  * @param y_pos: y position of bottom left corner of text box
+ * @param wrap_allowed: if true allows text wrapping
+ * @param x_edge: This is the x_edge used for screen wrapping. If -1 this is just the edge of the screen.
  */
-TFT_TEXT_BOX(SPI_TypeDef *SPIx, uint16_t bg_color, uint16_t x_pos, uint16_t y_pos, bool wrap_allowed = false);
-//Delete all other constructors
-TFT_TEXT_BOX(void) = delete;
-TFT_TEXT_BOX(const TFT_TEXT_BOX&) = delete;
-TFT_TEXT_BOX(const TFT_TEXT_BOX&&) = delete;
-TFT_TEXT_BOX& operator=(const TFT_TEXT_BOX&) = delete;
-TFT_TEXT_BOX& operator=(const TFT_TEXT_BOX&&) = delete;
+TFT_TEXT_BOX(TFT_GFX* display, uint16_t bg_color, uint16_t x_pos, uint16_t y_pos, int16_t x_edge = -1, bool is_centered = false);
+/**
+ * @brief Default constructor
+ */
+TFT_TEXT_BOX(void);
 //Public Function Prototypes
 /**
  * @brief Writes a null terminated string in the text box
  * @param string: Null terminated string to write
  * @param font_size: Size of the font
+ * @retval Returns the y position of the bottom of the text box.
  */
-void write(const char* string, uint16_t font_color, uint8_t font_size);
+uint16_t write(const char* string, uint16_t font_color, uint8_t font_size);
 /**
  * @brief This clears the text box
  */
@@ -68,24 +70,35 @@ void clear(void);
 //Public Variable
 private:
 //Private Variables
+/**
+ * @brief This holds a pointer to the main display for GFX
+ */
+TFT_GFX* main_display;
+/**
+ * @brief This is the x and y pos
+ */
 uint16_t xPos;
 uint16_t yPos;
 /**
- * @brief This tracks the previous string length so we know how much to erase
+ * @brief This tracks the X bound of the previous string so we know how much to erase
  */
-uint8_t prevStringLength;
+uint16_t prevMaxX;
 /**
- * @brief This tracks the previous font size so we know how much to erase
+ * @brief This tracks the Y bound of the previous string so we know how much to erase
  */
-uint8_t prevFontSize;
+uint16_t prevMaxY;
 /**
  * @brief This is the color of the background which the text box lies on top of. Used for clear
  */
 uint16_t bgColor;
 /**
- * @brief This tracks whether we allow text wrapping to a new line
+ * @brief This is the x edge used for wrapping text
  */
-bool wrapAllowed;
+uint16_t wrapXEdge;
+/**
+ * @brief This is true if this text box should be centered false if not
+ */
+bool isCentered;
 //Private Function Prototypes
 };
 

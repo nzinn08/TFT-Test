@@ -7,6 +7,7 @@
 
 //Include Files
 #include "main.h"
+#include <utility>
 //C Interface
 #ifdef __cplusplus
 extern "C" {
@@ -183,10 +184,12 @@ void drawChar(int16_t x, int16_t y, unsigned char c, uint16_t color, uint16_t bg
     @param    bg 16-bit 5-6-5 Color to fill background with (if same as color, no background)
     @param    size_x  Font magnification level in X-axis, 1 is 'original' size
     @param    size_y  Font magnification level in Y-axis, 1 is 'original' size
-    @retval   Returns the size of @s
+    @param	  x_edge   This is the edge of the text string for wrapping and centering
+    @param	  do_center	  True to center text false if not
+    @retval   Returns the bound of the string in the x direction in first and the bound of the string in the y direction in second
 */
 /**************************************************************************/
-uint8_t drawString(int16_t init_x, int16_t init_y, const char* s, uint16_t color, uint16_t bg, uint8_t size_x, uint8_t size_y, bool do_wrap = false);
+std::pair<uint16_t, uint16_t> drawString(int16_t init_x, int16_t init_y, const char* s, uint16_t color, uint16_t bg, uint8_t size_x, uint8_t size_y, uint16_t x_edge, bool do_center = false);
 /**************************************************************************/
 /*!
     @brief   Set origin of (0,0) and orientation of TFT display
@@ -206,13 +209,32 @@ uint16_t height(void);
 //Public Variable
 private:
 //Private Constants
-static constexpr uint8_t MAX_STRING_LENGTH = 30;
+static constexpr uint8_t MAX_STRING_LENGTH = 100;
 //Private Variables
 SPI_TypeDef* spiInstance;
 //This is not the same as TFT_WIDTH and TFT_HEIGHT due to the fact we can rotate the screen
 uint16_t _width;
 uint16_t _height;
 //Private Function Prototypes
+/**
+ * @brief This returns the size of the current word pointed to be string
+ * @param A null-terminated or space-terminated string
+ * @retval The amount of characters in the word pointed to be string. 0 if string points to a space or null character.
+ */
+uint8_t getWordSize(const char* string);
+/**
+ * @brief This returns the expected size of the line
+ * @param string: A null-terminated string
+ * @param max_chars_in_line: The maximum number of characters in one line
+ * @retval The number of characters that will fit onto this line
+ */
+uint8_t getLineSize(const char* string, uint8_t max_chars_in_line);
+/**
+ * @brief This returns the total characters in a string
+ * @param string: A null-terminated string
+ * @retval The number of characters in string, disregarding the null character
+ */
+uint8_t getStringSize(const char* string);
 };
 
 #endif //End Header Guard

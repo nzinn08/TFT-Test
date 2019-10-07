@@ -69,5 +69,15 @@
 			<type>1</type>
 			<locationURI>PROJECT_LOC/tft-display-code/pin-definitions.h</locationURI>
 		</link>
+		<link>
+			<name>Src/tft-display-code/text-box.cpp</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/tft-display-code/text-box.cpp</locationURI>
+		</link>
+		<link>
+			<name>Src/tft-display-code/text-box.h</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/tft-display-code/text-box.h</locationURI>
+		</link>
 	</linkedResources>
 </projectDescription>

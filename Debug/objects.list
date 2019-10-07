@@ -24,4 +24,5 @@
 "Src/system_stm32f0xx.o"
 "Src/tft-display-code/gfx.o"
 "Src/tft-display-code/hspi.o"
+"Src/tft-display-code/text-box.o"
 "Startup/startup_stm32f072rbtx.o"

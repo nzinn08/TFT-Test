@@ -32,7 +32,54 @@ namespace{
 //Public Function Prototypes
 
 //Private Function Definitions
+uint8_t TFT_GFX::getWordSize(const char* string)
+{
+	uint8_t counter = 0;
+	while(*string != ' ' && *string != '\0')
+	{
+		counter++;
+		string++;
+	}
+	return counter;
+}
 
+uint8_t TFT_GFX::getLineSize(const char* string, uint8_t max_chars_in_line)
+{
+	uint8_t currCharsInLine = 0;
+	bool overFlowed = false;
+	while(*string && !overFlowed)
+	{
+		uint8_t nextWordSize = this->getWordSize(string);
+		//This is to account for spaces
+		if(nextWordSize == 0)
+		{
+			nextWordSize = 1;
+		}
+		//Check if we overflow
+		if(currCharsInLine + nextWordSize > max_chars_in_line)
+		{
+			if(currCharsInLine == 0)
+			{
+				currCharsInLine = max_chars_in_line;
+			}
+			overFlowed = true;
+		}else{
+			currCharsInLine += nextWordSize;
+			string += nextWordSize;
+		}
+	}
+	return currCharsInLine;
+}
+
+uint8_t TFT_GFX::getStringSize(const char* string)
+{
+	uint8_t counter = 0;
+	while(*(string++))
+	{
+		counter++;
+	}
+	return counter;
+}
 //Public Function Definitions
 TFT_GFX::TFT_GFX(SPI_TypeDef *SPIx):
 spiInstance{SPIx}, _width{ILI9341_TFTWIDTH}, _height{ILI9341_TFTHEIGHT}
@@ -178,24 +225,56 @@ void TFT_GFX::drawChar(int16_t x, int16_t y, unsigned char c, uint16_t color, ui
     //endWrite();
 }
 
-uint8_t TFT_GFX::drawString(int16_t init_x, int16_t init_y, const char* s, uint16_t color, uint16_t bg, uint8_t size_x, uint8_t size_y, bool do_wrap)
+std::pair<uint16_t, uint16_t> TFT_GFX::drawString(int16_t init_x, int16_t init_y, const char* s, uint16_t color, uint16_t bg, uint8_t size_x, uint8_t size_y, uint16_t x_edge, bool do_center)
 {
-	uint8_t counter = 0;
+	uint8_t totalChars = this->getStringSize(s);
+	totalChars = (totalChars > TFT_GFX::MAX_STRING_LENGTH ? TFT_GFX::MAX_STRING_LENGTH : totalChars);
+
 	uint16_t currX = init_x;
 	uint16_t currY = init_y;
-	while(s && counter < TFT_GFX::MAX_STRING_LENGTH)
+
+	uint16_t maxX = init_x;
+	uint16_t maxY = init_y + (size_y * 8);
+
+	uint8_t currWordSize = 0;
+	bool continueWriting = false;
+	const uint8_t maxCharsInLine = (x_edge - init_x)/(size_x * 6);
+	while(*s)
 	{
-		drawChar(currX,currY,*(s++),color,bg,size_x,size_y);
-		currX += size_x * 6;
-		//This handles wrapping text
-		if(do_wrap && (currX + (size_x * 6) > this->_width))
+		uint8_t currLineSize = this->getLineSize(s, maxCharsInLine);
+		if(do_center)
 		{
+			currX = ((x_edge - init_x) - (currLineSize * size_x * 6))/2 + init_x;
+		}else{
 			currX = init_x;
-			currY += size_y * 8;
 		}
-		counter++;
+
+		for(uint8_t i = 0; i < currLineSize; i++)
+		{
+			drawChar(currX,currY,*(s++),color,bg,size_x,size_y);
+			currX += size_x * 6;
+			if(currX > maxX)
+			{
+				maxX = currX;
+			}
+		}
+		currY += size_y * 8;
+		//If the next line starts with a space lets just skip it
+		if(*s == ' ')
+		{
+			s++;
+		}
 	}
-	return counter;
+	maxY = currY;
+	if(maxX > this->_width)
+	{
+		maxX = this->_width;
+	}
+	if(maxY > this->_height)
+	{
+		maxY = this->_height;
+	}
+	return std::make_pair(maxX, maxY);
 }
 
 void TFT_GFX::setRotation(uint8_t m)
