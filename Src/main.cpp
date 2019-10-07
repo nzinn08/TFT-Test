@@ -102,7 +102,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   TFT_GFX tftDisplay{hspi2.Instance};
   const uint16_t backgroundColor = ILI9341_BLACK;
-  const uint16_t fontColor = ILI9341_GREENYELLOW;
+  const uint16_t fontColor = ILI9341_RED;
   const uint16_t lineColor = ILI9341_ORANGE;
   const uint16_t lineThickness = 5;
   const uint8_t chosenStatesFontSize = 2;
@@ -123,14 +123,16 @@ int main(void)
   uint16_t bottomInstructionBox = instructionBox.write("*Hold OK button for 3 seconds to confirm selection.", fontColor, 1);
   TFT_TEXT_BOX mainTitle{&tftDisplay,backgroundColor,lineThickness + 8, bottomInstructionBox + 10, tftDisplay.width() - lineThickness - 8, false};
   uint16_t bottomMainTitle = mainTitle.write("State Selection: ", fontColor, 2);
-  TFT_TEXT_BOX stateSelector{&tftDisplay, backgroundColor, lineThickness + 8, bottomMainTitle + 25,tftDisplay.width() - lineThickness - 8, true};
+  TFT_TEXT_BOX stateSelector{&tftDisplay, backgroundColor, lineThickness, bottomMainTitle + 25,tftDisplay.width() - lineThickness, true};
+  //Generate the chosenStates text boxes
   TFT_TEXT_BOX chosenStates[NUM_BOXES];
   for(int i = 0; i < NUM_BOXES; i++)
   {
 	  uint16_t yPos = tftDisplay.height()/2.0f + (float)(2*i+1)*tftDisplay.height()/(2.0f* NUM_BOXES * 2.0f) - (chosenStatesFontSize * 8.0f)/2;
 	  chosenStates[i] = TFT_TEXT_BOX{&tftDisplay, backgroundColor, lineThickness + 8, yPos,tftDisplay.width() - lineThickness - 8, false};
   }
-  for(int i = 0; i < 50; i++)
+  uint8_t i = 0;
+  while(1)
   {
 	  stateSelector.write(stateNames[i], fontColor, stateSelectorFontSize);
 	  for(int j = 0; j < NUM_BOXES; j++)
@@ -139,27 +141,10 @@ int main(void)
 		  sprintf(chosenString, "%d: %s",j+1,stateNames[i]);
 		  chosenStates[j].write(chosenString, fontColor, chosenStatesFontSize);
 	  }
-	  HAL_Delay(1000);
+	  HAL_Delay(500);
+	  i = (i+1)%50;
   }
-  //TESTING STUFF
-  //Draw on the background
-  /*
-  uint16_t x_inc = 20;
-  int16_t init_x = 30;
-  uint16_t displayColor = ILI9341_GREENYELLOW;
-  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, 'A', displayColor, displayColor, 5, 5);
-  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, 'l', displayColor, displayColor, 5, 5);
-  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, 'e', displayColor, displayColor, 5, 5);
-  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, 'x', displayColor, displayColor, 5, 5);
-  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, ' ', displayColor, displayColor, 5, 5);
-  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, 'i', displayColor, displayColor, 5, 5);
-  tftDisplay.drawChar(init_x += x_inc, tftDisplay.height()/4.0, 'x', displayColor, displayColor, 5, 5);
-  x_inc = 60;
-  init_x = -20;
-  tftDisplay.drawChar(init_x += x_inc, 2*(tftDisplay.height()/4.0), 'G', displayColor, displayColor, 10, 10);
-  tftDisplay.drawChar(init_x += x_inc, 2*(tftDisplay.height()/4.0), 'A', displayColor, displayColor, 10, 10);
-  tftDisplay.drawChar(init_x += x_inc, 2*(tftDisplay.height()/4.0), 'Y', displayColor, displayColor, 10, 10);
-  */
+
   /* USER CODE END 2 */
 
   /* Infinite loop */

@@ -236,20 +236,26 @@ std::pair<uint16_t, uint16_t> TFT_GFX::drawString(int16_t init_x, int16_t init_y
 	uint16_t maxX = init_x;
 	uint16_t maxY = init_y + (size_y * 8);
 
-	uint8_t currWordSize = 0;
-	bool continueWriting = false;
 	const uint8_t maxCharsInLine = (x_edge - init_x)/(size_x * 6);
 	while(*s)
 	{
 		uint8_t currLineSize = this->getLineSize(s, maxCharsInLine);
+		uint8_t functionalLineSize;
+		if(s[currLineSize - 1] == ' ')
+		{
+			functionalLineSize = currLineSize - 1;
+		}else{
+			functionalLineSize = currLineSize;
+		}
+
 		if(do_center)
 		{
-			currX = ((x_edge - init_x) - (currLineSize * size_x * 6))/2 + init_x;
+			currX = ((x_edge - init_x) - (functionalLineSize * size_x * 6))/2 + init_x;
 		}else{
 			currX = init_x;
 		}
 
-		for(uint8_t i = 0; i < currLineSize; i++)
+		for(uint8_t i = 0; i < functionalLineSize; i++)
 		{
 			drawChar(currX,currY,*(s++),color,bg,size_x,size_y);
 			currX += size_x * 6;
@@ -258,6 +264,9 @@ std::pair<uint16_t, uint16_t> TFT_GFX::drawString(int16_t init_x, int16_t init_y
 				maxX = currX;
 			}
 		}
+		//Skip the space
+		s += (functionalLineSize == currLineSize ? 0 : 1);
+		//Go to next row
 		currY += size_y * 8;
 		//If the next line starts with a space lets just skip it
 		if(*s == ' ')
