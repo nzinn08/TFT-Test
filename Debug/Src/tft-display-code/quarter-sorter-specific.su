@@ -1,0 +1,1 @@
+quarter-sorter-specific.cpp:22:6:void chosenStatePrinter(TFT_TEXT_BOX*, uint8_t, const char*, uint16_t, uint8_t)	56	static

@@ -70,6 +70,11 @@
 			<locationURI>PROJECT_LOC/tft-display-code/pin-definitions.h</locationURI>
 		</link>
 		<link>
+			<name>Src/tft-display-code/quarter-sorter-specific.cpp</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/tft-display-code/quarter-sorter-specific.cpp</locationURI>
+		</link>
+		<link>
 			<name>Src/tft-display-code/quarter-sorter-specific.h</name>
 			<type>1</type>
 			<locationURI>PROJECT_LOC/tft-display-code/quarter-sorter-specific.h</locationURI>

@@ -1,5 +1,9 @@
-Src/main.o: ../Src/main.cpp ../Inc/main.h \
- ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h \
+Src/tft-display-code/quarter-sorter-specific.o: \
+ /home/nzinn/Documents/senior-mcu/TFT-Test/tft-display-code/quarter-sorter-specific.cpp \
+ /home/nzinn/Documents/senior-mcu/TFT-Test/tft-display-code/quarter-sorter-specific.h \
+ /home/nzinn/Documents/senior-mcu/TFT-Test/tft-display-code/text-box.h \
+ /home/nzinn/Documents/senior-mcu/TFT-Test/tft-display-code/gfx.h \
+ ../Inc/main.h ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h \
  ../Inc/stm32f0xx_hal_conf.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h \
@@ -25,11 +29,13 @@ Src/main.o: ../Src/main.cpp ../Inc/main.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h \
- ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h \
- ../tft-display-code/hspi.h ../tft-display-code/gfx.h \
- ../tft-display-code/text-box.h ../tft-display-code/gfx.h \
- ../tft-display-code/quarter-sorter-specific.h \
- ../tft-display-code/text-box.h
+ ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
+
+/home/nzinn/Documents/senior-mcu/TFT-Test/tft-display-code/quarter-sorter-specific.h:
+
+/home/nzinn/Documents/senior-mcu/TFT-Test/tft-display-code/text-box.h:
+
+/home/nzinn/Documents/senior-mcu/TFT-Test/tft-display-code/gfx.h:
 
 ../Inc/main.h:
 
@@ -86,15 +92,3 @@ Src/main.o: ../Src/main.cpp ../Inc/main.h \
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h:
 
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h:
-
-../tft-display-code/hspi.h:
-
-../tft-display-code/gfx.h:
-
-../tft-display-code/text-box.h:
-
-../tft-display-code/gfx.h:
-
-../tft-display-code/quarter-sorter-specific.h:
-
-../tft-display-code/text-box.h:

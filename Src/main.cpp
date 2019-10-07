@@ -102,8 +102,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
   TFT_GFX tftDisplay{hspi2.Instance};
   const uint16_t backgroundColor = ILI9341_BLACK;
-  const uint16_t fontColor = ILI9341_RED;
-  const uint16_t lineColor = ILI9341_ORANGE;
+  const uint16_t fontColor = ILI9341_DARK_ORANGE;
+  const uint16_t lineColor = ILI9341_DARK_ORANGE;
   const uint16_t lineThickness = 5;
   const uint8_t chosenStatesFontSize = 2;
   const uint8_t stateSelectorFontSize = 3;
@@ -137,9 +137,7 @@ int main(void)
 	  stateSelector.write(stateNames[i], fontColor, stateSelectorFontSize);
 	  for(int j = 0; j < NUM_BOXES; j++)
 	  {
-		  char chosenString[STATE_MAX_CHARS + 3 + 1];
-		  sprintf(chosenString, "%d: %s",j+1,stateNames[i]);
-		  chosenStates[j].write(chosenString, fontColor, chosenStatesFontSize);
+		  chosenStatePrinter(&chosenStates[j], j+1, stateNames[i], fontColor, chosenStatesFontSize);
 	  }
 	  HAL_Delay(500);
 	  i = (i+1)%50;

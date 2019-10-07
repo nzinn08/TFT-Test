@@ -25,6 +25,8 @@ extern "C" {
 #define MADCTL_BGR 0x08  ///< Blue-Green-Red pixel order
 #define MADCTL_MH  0x04  ///< LCD refresh right to left
 // Color definitions
+#define ILI9341_DARK_ORANGE 0xfc60  ///< 255, 140, 0
+#define ILI9341_GOLD_ROD	0xdd24	///< 218, 165, 32
 #define ILI9341_BLACK       0x0000  ///<   0,   0,   0
 #define ILI9341_NAVY        0x000F  ///<   0,   0, 123
 #define ILI9341_DARKGREEN   0x03E0  ///<   0, 125,   0
