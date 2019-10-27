@@ -1,0 +1,2 @@
+generic-rotary-encoder.cpp:22:1:ROTARY_ENCODER::ROTARY_ENCODER(uint8_t)	16	static
+generic-rotary-encoder.cpp:26:6:void ROTARY_ENCODER::doTick(bool)	24	static

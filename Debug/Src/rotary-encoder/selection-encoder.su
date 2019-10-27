@@ -1,0 +1,2 @@
+selection-encoder.cpp:22:1:SELECTION_ENCODER::SELECTION_ENCODER(uint8_t, TFT_TEXT_BOX*, uint16_t, uint8_t, const char* const*, uint16_t)	32	static
+selection-encoder.cpp:28:6:virtual void SELECTION_ENCODER::doStep(bool)	16	static

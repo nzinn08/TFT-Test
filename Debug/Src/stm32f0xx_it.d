@@ -1,4 +1,4 @@
-Src/stm32f0xx_it.o: ../Src/stm32f0xx_it.c ../Inc/main.h \
+Src/stm32f0xx_it.o: ../Src/stm32f0xx_it.cpp ../Inc/main.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h \
  ../Inc/stm32f0xx_hal_conf.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h \
@@ -26,7 +26,7 @@ Src/stm32f0xx_it.o: ../Src/stm32f0xx_it.c ../Inc/main.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h \
- ../Inc/stm32f0xx_it.h
+ ../Inc/stm32f0xx_it.h ../rotary-encoder/generic-rotary-encoder.h
 
 ../Inc/main.h:
 
@@ -85,3 +85,5 @@ Src/stm32f0xx_it.o: ../Src/stm32f0xx_it.c ../Inc/main.h \
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h:
 
 ../Inc/stm32f0xx_it.h:
+
+../rotary-encoder/generic-rotary-encoder.h:

@@ -23,6 +23,7 @@
 #include "stm32f0xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "generic-rotary-encoder.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -42,7 +43,9 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-
+extern ROTARY_ENCODER* encoderPtr;
+static volatile uint8_t cleanA = 1;
+static volatile uint8_t prevA = 1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -139,7 +142,56 @@ void SysTick_Handler(void)
 /* please refer to the startup file (startup_stm32f0xx.s).                    */
 /******************************************************************************/
 
+/**
+  * @brief This function handles EXTI line 4 to 15 interrupts.
+  */
+void EXTI4_15_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI4_15_IRQn 0 */
+
+  /* USER CODE END EXTI4_15_IRQn 0 */
+  //This is for the encoder A input
+  HAL_GPIO_EXTI_IRQHandler(ENC_A_Pin);
+  //This is for the Ok button
+  HAL_GPIO_EXTI_IRQHandler(ENC_OK_Pin);
+  //This is for button and should be removed
+  HAL_GPIO_EXTI_IRQHandler(B1_Pin);
+  /* USER CODE BEGIN EXTI4_15_IRQn 1 */
+
+  /* USER CODE END EXTI4_15_IRQn 1 */
+}
+
 /* USER CODE BEGIN 1 */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	if(GPIO_Pin == ENC_A_Pin)
+	{
+		/*uint8_t currA = (ENC_A_GPIO_Port->IDR & ENC_A_Pin) != 0;
+		uint8_t currB = (ENC_B_GPIO_Port->IDR & ENC_B_Pin) != 0;
+		if(currA != prevA)
+		{
+			prevA = currA;
+			if(currB != cleanA)
+			{
+				cleanA = currB;
+				encoderPtr->doTick(currA == currB);
+			}
+		}*/
+		HAL_Delay(2/10);
+		if(ENC_A_GPIO_Port->IDR & ENC_A_Pin)
+		{
+			encoderPtr->doTick(ENC_B_GPIO_Port->IDR & ENC_B_Pin);
+		}
+	}else if(GPIO_Pin == ENC_OK_Pin)
+	{
+
+	}else if(GPIO_Pin == B1_Pin)
+	{
+		HAL_Delay(10);
+		if(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin) == GPIO_PIN_RESET)
+			HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+	}
+}
 
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

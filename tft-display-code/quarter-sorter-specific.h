@@ -13,9 +13,10 @@
 extern "C" {
 #endif
 //C Public Constants
-constexpr uint8_t STATE_MAX_CHARS = 14;
+static constexpr uint8_t NUM_NAMES = 50;
+static constexpr uint8_t STATE_MAX_CHARS = 14;
 //C Public Variables
-const char* const stateNames[50] = {"Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
+const char* const stateNames[NUM_NAMES] = {"Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
 		"Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana",
 		"Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan",
 		"Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire",

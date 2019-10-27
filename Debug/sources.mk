@@ -28,6 +28,7 @@ CPP_DEPS :=
 SUBDIRS := \
 Drivers/STM32F0xx_HAL_Driver/Src \
 Src \
+Src/rotary-encoder \
 Src/tft-display-code \
 Startup \
 

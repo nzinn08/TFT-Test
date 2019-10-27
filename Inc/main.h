@@ -28,8 +28,6 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-//Take out
-#include "stdint.h"
 #include "stm32f0xx_hal.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -62,6 +60,7 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define B1_Pin GPIO_PIN_13
 #define B1_GPIO_Port GPIOC
+#define B1_EXTI_IRQn EXTI4_15_IRQn
 #define TFT_D_C_Pin GPIO_PIN_0
 #define TFT_D_C_GPIO_Port GPIOC
 #define SPI2_NSS_Pin GPIO_PIN_1
@@ -78,6 +77,14 @@ void Error_Handler(void);
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
+#define ENC_B_Pin GPIO_PIN_15
+#define ENC_B_GPIO_Port GPIOA
+#define ENC_A_Pin GPIO_PIN_10
+#define ENC_A_GPIO_Port GPIOC
+#define ENC_A_EXTI_IRQn EXTI4_15_IRQn
+#define ENC_OK_Pin GPIO_PIN_11
+#define ENC_OK_GPIO_Port GPIOC
+#define ENC_OK_EXTI_IRQn EXTI4_15_IRQn
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

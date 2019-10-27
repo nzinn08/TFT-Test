@@ -40,9 +40,34 @@
 			<location>/home/nzinn/Documents/Senior-Test/TFT-Test/Inc/pin-definitions.h</location>
 		</link>
 		<link>
+			<name>Src/rotary-encoder</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>Src/tft-display-code</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>Src/rotary-encoder/generic-rotary-encoder.cpp</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/rotary-encoder/generic-rotary-encoder.cpp</locationURI>
+		</link>
+		<link>
+			<name>Src/rotary-encoder/generic-rotary-encoder.h</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/rotary-encoder/generic-rotary-encoder.h</locationURI>
+		</link>
+		<link>
+			<name>Src/rotary-encoder/selection-encoder.cpp</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/rotary-encoder/selection-encoder.cpp</locationURI>
+		</link>
+		<link>
+			<name>Src/rotary-encoder/selection-encoder.h</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/rotary-encoder/selection-encoder.h</locationURI>
 		</link>
 		<link>
 			<name>Src/tft-display-code/gfx.cpp</name>
