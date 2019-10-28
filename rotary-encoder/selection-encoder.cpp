@@ -25,6 +25,11 @@ ROTARY_ENCODER(ticks_per_step), displayBox{display_box}, fontColor{font_color},
 fontSize{font_size}, outputTextArray{output_text_array}, outputTextLength{output_text_length}, nameIndex{0}
 {}
 
+uint16_t SELECTION_ENCODER::getCurrentNameIndex(void)
+{
+	return this->nameIndex;
+}
+
 void SELECTION_ENCODER::doStep(bool up_not_down)
 {
 	if(up_not_down)

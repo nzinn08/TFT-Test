@@ -38,7 +38,7 @@ public:
 SELECTION_ENCODER(uint8_t ticks_per_step, TFT_TEXT_BOX* display_box,
 		uint16_t font_color, uint8_t font_size, const char * const * output_text_array, uint16_t output_text_length);
 //Public Function Prototypes
-
+uint16_t getCurrentNameIndex(void);
 //Public Constants
 
 //Public Variable

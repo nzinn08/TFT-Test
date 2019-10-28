@@ -23,7 +23,8 @@
 #include "stm32f0xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "generic-rotary-encoder.h"
+#include "selection-encoder.h"
+#include "quarter-sorter-specific.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,7 +44,10 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-extern ROTARY_ENCODER* encoderPtr;
+extern uint8_t statesSelected;
+extern CHOSEN_STATE_TEXT_BOX chosenStates[NUM_BOXES];
+
+extern SELECTION_ENCODER* encoderPtr;
 static volatile uint8_t cleanA = 1;
 static volatile uint8_t prevA = 1;
 /* USER CODE END PV */
@@ -168,21 +172,19 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	if(GPIO_Pin == ENC_A_Pin || GPIO_Pin == ENC_B_Pin)
 	{
-		/*uint8_t currA = (ENC_A_GPIO_Port->IDR & ENC_A_Pin) != 0;
-		uint8_t currB = (ENC_B_GPIO_Port->IDR & ENC_B_Pin) != 0;
-		if(currA != prevA)
-		{
-			prevA = currA;
-			if(currB != cleanA)
-			{
-				cleanA = currB;
-				encoderPtr->doTick(currA == currB);
-			}
-		}*/
 		encoderPtr->process((ENC_A_GPIO_Port->IDR & ENC_A_Pin) != 0, (ENC_B_GPIO_Port->IDR & ENC_B_Pin) != 0);
 	}else if(GPIO_Pin == ENC_OK_Pin)
 	{
-
+		HAL_Delay(10);
+		if(!(ENC_OK_GPIO_Port->IDR & ENC_OK_Pin))
+		{
+			chosenStates[statesSelected++].printState(stateNames[encoderPtr->getCurrentNameIndex()]);
+			//Stay at the last state box
+			if(statesSelected == NUM_BOXES)
+			{
+				statesSelected--;
+			}
+		}
 	}else if(GPIO_Pin == B1_Pin)
 	{
 		HAL_Delay(10);

@@ -51,7 +51,11 @@ SPI_HandleTypeDef hspi2;
 
 UART_HandleTypeDef huart2;
 
-ROTARY_ENCODER* encoderPtr;
+SELECTION_ENCODER* encoderPtr;
+
+CHOSEN_STATE_TEXT_BOX chosenStates[NUM_BOXES];
+
+uint8_t statesSelected = 0;
 
 /* USER CODE BEGIN PV */
 
@@ -110,7 +114,6 @@ int main(void)
   const uint16_t lineThickness = 5;
   const uint8_t chosenStatesFontSize = 2;
   const uint8_t stateSelectorFontSize = 3;
-  constexpr uint16_t NUM_BOXES = 5;
   tftDisplay.setRotation(0);
   //Set background to correct color and add outline
   tftDisplay.writeFillRect(0, 0, tftDisplay.width(), tftDisplay.height(), lineColor);
@@ -128,11 +131,10 @@ int main(void)
   uint16_t bottomMainTitle = mainTitle.write("State Selection: ", fontColor, 2);
   TFT_TEXT_BOX stateSelector{&tftDisplay, backgroundColor, lineThickness, bottomMainTitle + 25,tftDisplay.width() - lineThickness, true};
   //Generate the chosenStates text boxes
-  TFT_TEXT_BOX chosenStates[NUM_BOXES];
   for(int i = 0; i < NUM_BOXES; i++)
   {
 	  uint16_t yPos = tftDisplay.height()/2.0f + (float)(2*i+1)*tftDisplay.height()/(2.0f* NUM_BOXES * 2.0f) - (chosenStatesFontSize * 8.0f)/2;
-	  chosenStates[i] = TFT_TEXT_BOX{&tftDisplay, backgroundColor, lineThickness + 8, yPos,tftDisplay.width() - lineThickness - 8, false};
+	  chosenStates[i] = CHOSEN_STATE_TEXT_BOX{i+1, fontColor, chosenStatesFontSize, TFT_TEXT_BOX{&tftDisplay, backgroundColor, lineThickness + 8, yPos,tftDisplay.width() - lineThickness - 8, false}};
   }
   stateSelector.write(stateNames[0], fontColor, stateSelectorFontSize);
   SELECTION_ENCODER stateEncoder{1, &stateSelector, fontColor, stateSelectorFontSize, stateNames, NUM_NAMES};

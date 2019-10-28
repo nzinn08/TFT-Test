@@ -19,12 +19,19 @@
 //Private Function Definitions
 
 //Public Function Definitions
-void chosenStatePrinter(TFT_TEXT_BOX* chosen_state, uint8_t text_box_num, const char* state_name, uint16_t font_color, uint8_t font_size)
+CHOSEN_STATE_TEXT_BOX::CHOSEN_STATE_TEXT_BOX(uint8_t text_box_number, uint16_t font_color,
+		uint8_t font_size, const TFT_TEXT_BOX& general_text_box):
+TFT_TEXT_BOX(general_text_box),currentText{nullptr}, textBoxNumber{text_box_number}, fontColor{font_color}, fontSize{font_size}
+{}
+
+CHOSEN_STATE_TEXT_BOX::CHOSEN_STATE_TEXT_BOX(void):
+TFT_TEXT_BOX(),currentText{nullptr}, textBoxNumber{0}, fontColor{0}, fontSize{0}
+{}
+
+void CHOSEN_STATE_TEXT_BOX::printState(const char* state_name)
 {
-    if(chosen_state != nullptr)
-    {
-        char outputString[STATE_MAX_CHARS + 3 + 1];
-        sprintf(outputString, "%d: %s",text_box_num,state_name);
-        chosen_state->write(outputString, font_color, font_size);
-    }
+	this->currentText = state_name;
+	char outputString[STATE_MAX_CHARS + 3 + 1];
+	sprintf(outputString, "%d: %s",this->textBoxNumber,state_name);
+	this->write(outputString, this->fontColor, this->fontSize);
 }
