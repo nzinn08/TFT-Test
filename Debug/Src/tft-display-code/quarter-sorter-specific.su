@@ -1,3 +1,4 @@
 quarter-sorter-specific.cpp:22:1:CHOSEN_STATE_TEXT_BOX::CHOSEN_STATE_TEXT_BOX(uint8_t, uint16_t, uint8_t, const TFT_TEXT_BOX&)	24	static
 quarter-sorter-specific.cpp:27:1:CHOSEN_STATE_TEXT_BOX::CHOSEN_STATE_TEXT_BOX()	16	static
 quarter-sorter-specific.cpp:31:6:void CHOSEN_STATE_TEXT_BOX::printState(const char*)	48	static
+quarter-sorter-specific.cpp:39:13:const char* CHOSEN_STATE_TEXT_BOX::getCurrentText()	16	static

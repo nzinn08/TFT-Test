@@ -179,6 +179,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		if(!(ENC_OK_GPIO_Port->IDR & ENC_OK_Pin))
 		{
 			chosenStates[statesSelected++].printState(stateNames[encoderPtr->getCurrentNameIndex()]);
+			encoderPtr->printNextAvailableState();
 			//Stay at the last state box
 			if(statesSelected == NUM_BOXES)
 			{

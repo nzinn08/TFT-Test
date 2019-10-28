@@ -137,7 +137,7 @@ int main(void)
 	  chosenStates[i] = CHOSEN_STATE_TEXT_BOX{i+1, fontColor, chosenStatesFontSize, TFT_TEXT_BOX{&tftDisplay, backgroundColor, lineThickness + 8, yPos,tftDisplay.width() - lineThickness - 8, false}};
   }
   stateSelector.write(stateNames[0], fontColor, stateSelectorFontSize);
-  SELECTION_ENCODER stateEncoder{1, &stateSelector, fontColor, stateSelectorFontSize, stateNames, NUM_NAMES};
+  SELECTION_ENCODER stateEncoder{1, &stateSelector, fontColor, stateSelectorFontSize, stateNames, NUM_NAMES, chosenStates, NUM_BOXES};
   encoderPtr = &stateEncoder;
   //Now enable interrupts for the rotary encoder
   HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);

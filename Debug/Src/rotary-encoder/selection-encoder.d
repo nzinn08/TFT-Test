@@ -29,7 +29,9 @@ Src/rotary-encoder/selection-encoder.o: \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h \
- ../tft-display-code/text-box.h ../tft-display-code/gfx.h
+ ../tft-display-code/text-box.h ../tft-display-code/gfx.h \
+ ../tft-display-code/quarter-sorter-specific.h \
+ ../tft-display-code/text-box.h
 
 /home/nzinn/Documents/senior-mcu/TFT-Test/rotary-encoder/selection-encoder.h:
 
@@ -94,3 +96,7 @@ Src/rotary-encoder/selection-encoder.o: \
 ../tft-display-code/text-box.h:
 
 ../tft-display-code/gfx.h:
+
+../tft-display-code/quarter-sorter-specific.h:
+
+../tft-display-code/text-box.h:

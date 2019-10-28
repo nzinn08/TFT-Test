@@ -35,3 +35,8 @@ void CHOSEN_STATE_TEXT_BOX::printState(const char* state_name)
 	sprintf(outputString, "%d: %s",this->textBoxNumber,state_name);
 	this->write(outputString, this->fontColor, this->fontSize);
 }
+
+const char* CHOSEN_STATE_TEXT_BOX::getCurrentText(void)
+{
+	return this->currentText;
+}

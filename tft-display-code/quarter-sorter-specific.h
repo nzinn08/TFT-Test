@@ -41,6 +41,7 @@ CHOSEN_STATE_TEXT_BOX(uint8_t text_box_number, uint16_t font_color, uint8_t font
 CHOSEN_STATE_TEXT_BOX(void);
 //Public Function Prototypes
 void printState(const char* state_name);
+const char* getCurrentText(void);
 //Public Constants
 
 //Public Variable
