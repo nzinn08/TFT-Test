@@ -4,4 +4,4 @@ stm32f0xx_it.cpp:101:6:void SVC_Handler()	8	static
 stm32f0xx_it.cpp:114:6:void PendSV_Handler()	8	static
 stm32f0xx_it.cpp:127:6:void SysTick_Handler()	8	static
 stm32f0xx_it.cpp:148:6:void EXTI4_15_IRQHandler()	8	static
-stm32f0xx_it.cpp:165:6:void HAL_GPIO_EXTI_Callback(uint16_t)	16	static
+stm32f0xx_it.cpp:167:6:void HAL_GPIO_EXTI_Callback(uint16_t)	16	static

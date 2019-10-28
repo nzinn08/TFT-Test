@@ -37,9 +37,10 @@ ROTARY_ENCODER(uint8_t ticks_per_step);
 //Public Function Prototypes
 /**
  * @brief This does a tick of the rotary encoder
- * @param up_not_down: True if tick up, false if tick down
+ * @param a_state: the pin value of input a, 1 or 0
+ * @param b_state the pin value of input b, 1 or 0
  */
-void doTick(bool up_not_down);
+void process(uint8_t a_state, uint8_t b_state);
 //Public Constants
 
 //Public Variable
@@ -47,6 +48,7 @@ private:
 //Private Variables
 uint8_t ticksPerStep;
 int16_t tickCounter;
+uint8_t state;
 //Private Function Prototypes
 virtual void doStep(bool up_not_down) = 0;
 };

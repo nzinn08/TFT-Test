@@ -12,6 +12,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+//C Structs
 //C Public Constants
 static constexpr uint8_t NUM_NAMES = 50;
 static constexpr uint8_t STATE_MAX_CHARS = 14;
