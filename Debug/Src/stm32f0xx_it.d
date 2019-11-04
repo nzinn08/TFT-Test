@@ -30,7 +30,7 @@ Src/stm32f0xx_it.o: ../Src/stm32f0xx_it.cpp ../Inc/main.h \
  ../rotary-encoder/generic-rotary-encoder.h \
  ../tft-display-code/text-box.h ../tft-display-code/gfx.h \
  ../tft-display-code/quarter-sorter-specific.h \
- ../tft-display-code/text-box.h
+ ../tft-display-code/text-box.h ../switch-debouncer/sw-debounce.h
 
 ../Inc/main.h:
 
@@ -101,3 +101,5 @@ Src/stm32f0xx_it.o: ../Src/stm32f0xx_it.cpp ../Inc/main.h \
 ../tft-display-code/quarter-sorter-specific.h:
 
 ../tft-display-code/text-box.h:
+
+../switch-debouncer/sw-debounce.h:

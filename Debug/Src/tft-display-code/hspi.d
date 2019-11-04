@@ -1,7 +1,7 @@
 Src/tft-display-code/hspi.o: \
- /home/nzinn/Documents/senior-mcu/TFT-Test/tft-display-code/hspi.c \
- /home/nzinn/Documents/senior-mcu/TFT-Test/tft-display-code/hspi.h \
- ../Inc/main.h ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h \
+ D:/Documents/senior-mcu/TFT-Test/tft-display-code/hspi.c \
+ D:/Documents/senior-mcu/TFT-Test/tft-display-code/hspi.h ../Inc/main.h \
+ ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h \
  ../Inc/stm32f0xx_hal_conf.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h \
@@ -28,9 +28,9 @@ Src/tft-display-code/hspi.o: \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h \
- /home/nzinn/Documents/senior-mcu/TFT-Test/tft-display-code/pin-definitions.h
+ D:/Documents/senior-mcu/TFT-Test/tft-display-code/pin-definitions.h
 
-/home/nzinn/Documents/senior-mcu/TFT-Test/tft-display-code/hspi.h:
+D:/Documents/senior-mcu/TFT-Test/tft-display-code/hspi.h:
 
 ../Inc/main.h:
 
@@ -88,4 +88,4 @@ Src/tft-display-code/hspi.o: \
 
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h:
 
-/home/nzinn/Documents/senior-mcu/TFT-Test/tft-display-code/pin-definitions.h:
+D:/Documents/senior-mcu/TFT-Test/tft-display-code/pin-definitions.h:

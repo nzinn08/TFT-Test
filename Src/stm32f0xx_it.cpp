@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include "selection-encoder.h"
 #include "quarter-sorter-specific.h"
+#include "sw-debounce.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -44,12 +45,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-extern uint8_t statesSelected;
-extern CHOSEN_STATE_TEXT_BOX chosenStates[NUM_BOXES];
-
 extern SELECTION_ENCODER* encoderPtr;
-static volatile uint8_t cleanA = 1;
-static volatile uint8_t prevA = 1;
+extern SW_DEBOUNCE* okButtonPtr;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -135,7 +132,10 @@ void SysTick_Handler(void)
   /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();
   /* USER CODE BEGIN SysTick_IRQn 1 */
-
+  if(okButtonPtr)
+  {
+	  okButtonPtr->process();
+  }
   /* USER CODE END SysTick_IRQn 1 */
 }
 
@@ -158,8 +158,6 @@ void EXTI4_15_IRQHandler(void)
   HAL_GPIO_EXTI_IRQHandler(ENC_A_Pin);
   //This is for the encoder B input
   HAL_GPIO_EXTI_IRQHandler(ENC_B_Pin);
-  //This is for the Ok button
-  HAL_GPIO_EXTI_IRQHandler(ENC_OK_Pin);
   //This is for button and should be removed
   HAL_GPIO_EXTI_IRQHandler(B1_Pin);
   /* USER CODE BEGIN EXTI4_15_IRQn 1 */
@@ -173,19 +171,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	if(GPIO_Pin == ENC_A_Pin || GPIO_Pin == ENC_B_Pin)
 	{
 		encoderPtr->process((ENC_A_GPIO_Port->IDR & ENC_A_Pin) != 0, (ENC_B_GPIO_Port->IDR & ENC_B_Pin) != 0);
-	}else if(GPIO_Pin == ENC_OK_Pin)
-	{
-		HAL_Delay(10);
-		if(!(ENC_OK_GPIO_Port->IDR & ENC_OK_Pin))
-		{
-			chosenStates[statesSelected++].printState(stateNames[encoderPtr->getCurrentNameIndex()]);
-			encoderPtr->printNextAvailableState();
-			//Stay at the last state box
-			if(statesSelected == NUM_BOXES)
-			{
-				statesSelected--;
-			}
-		}
 	}else if(GPIO_Pin == B1_Pin)
 	{
 		HAL_Delay(10);

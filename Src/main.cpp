@@ -29,6 +29,7 @@
 #include "quarter-sorter-specific.h"
 #include "selection-encoder.h"
 #include <stdio.h>
+#include "sw-debounce.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,7 +52,9 @@ SPI_HandleTypeDef hspi2;
 
 UART_HandleTypeDef huart2;
 
-SELECTION_ENCODER* encoderPtr;
+SELECTION_ENCODER* encoderPtr = nullptr;
+
+SW_DEBOUNCE* okButtonPtr = nullptr;
 
 CHOSEN_STATE_TEXT_BOX chosenStates[NUM_BOXES];
 
@@ -137,6 +140,10 @@ int main(void)
 	  chosenStates[i] = CHOSEN_STATE_TEXT_BOX{i+1, fontColor, chosenStatesFontSize, TFT_TEXT_BOX{&tftDisplay, backgroundColor, lineThickness + 8, yPos,tftDisplay.width() - lineThickness - 8, false}};
   }
   stateSelector.write(stateNames[0], fontColor, stateSelectorFontSize);
+  //Initialize debouncer for buttons
+  SW_DEBOUNCE okButton{ENC_OK_GPIO_Port, ENC_OK_Pin, 1};
+  okButtonPtr = &okButton;
+  //Initialize Rotary Encoder
   SELECTION_ENCODER stateEncoder{1, &stateSelector, fontColor, stateSelectorFontSize, stateNames, NUM_NAMES, chosenStates, NUM_BOXES};
   encoderPtr = &stateEncoder;
   //Now enable interrupts for the rotary encoder
@@ -158,11 +165,26 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  SWITCH_STATE currButtonState = okButton.getCurrentState();
+	  if(currButtonState == SWITCH_STATE::SHORT_PRESS)
+	  {
+		  chosenStates[statesSelected++].printState(stateNames[encoderPtr->getCurrentNameIndex()]);
+		  encoderPtr->printNextAvailableState();
+		  //Stay at the last state box
+		  if(statesSelected == NUM_BOXES)
+		  {
+			  statesSelected--;
+		  }
+	  }else if(currButtonState == SWITCH_STATE::THREE_SECOND_PRESS)
+	  {
+
+	  }
   }
   /* USER CODE END 3 */
 }
@@ -344,7 +366,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : ENC_OK_Pin */
   GPIO_InitStruct.Pin = ENC_OK_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(ENC_OK_GPIO_Port, &GPIO_InitStruct);
 

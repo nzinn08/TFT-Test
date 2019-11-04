@@ -1,8 +1,8 @@
-main.cpp:82:5:int main()	232	static
-main.cpp:174:6:void SystemClock_Config()	112	static
-main.cpp:214:13:void MX_SPI2_Init()	16	static
-main.cpp:259:13:void MX_USART2_UART_Init()	8	static
-main.cpp:294:13:void MX_GPIO_Init()	56	static
-main.cpp:363:6:void Error_Handler()	8	static
-main.cpp:369:1:void __static_initialization_and_destruction_0(int, int)	24	static
-main.cpp:369:1:cpp)	8	static
+main.cpp:85:5:int main()	264	static
+main.cpp:196:6:void SystemClock_Config()	112	static
+main.cpp:236:13:void MX_SPI2_Init()	16	static
+main.cpp:281:13:void MX_USART2_UART_Init()	8	static
+main.cpp:316:13:void MX_GPIO_Init()	56	static
+main.cpp:385:6:void Error_Handler()	8	static
+main.cpp:391:1:void __static_initialization_and_destruction_0(int, int)	24	static
+main.cpp:391:1:cpp)	8	static

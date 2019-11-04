@@ -10,6 +10,7 @@ RM := rm -rf
 -include sources.mk
 -include Startup/subdir.mk
 -include Src/tft-display-code/subdir.mk
+-include Src/switch-debouncer/subdir.mk
 -include Src/rotary-encoder/subdir.mk
 -include Src/subdir.mk
 -include Drivers/STM32F0xx_HAL_Driver/Src/subdir.mk
@@ -54,8 +55,8 @@ TFT_Test.list \
 all: TFT_Test.elf secondary-outputs
 
 # Tool invocations
-TFT_Test.elf: $(OBJS) $(USER_OBJS) /home/nzinn/Documents/senior-mcu/TFT-Test/STM32F072RBTX_FLASH.ld
-	arm-none-eabi-g++ -o "TFT_Test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"/home/nzinn/Documents/senior-mcu/TFT-Test/STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TFT_Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+TFT_Test.elf: $(OBJS) $(USER_OBJS) D:\Documents\senior-mcu\TFT-Test\STM32F072RBTX_FLASH.ld
+	arm-none-eabi-g++ -o "TFT_Test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"D:\Documents\senior-mcu\TFT-Test\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TFT_Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

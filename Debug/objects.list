@@ -24,6 +24,7 @@
 "Src/system_stm32f0xx.o"
 "Src/rotary-encoder/generic-rotary-encoder.o"
 "Src/rotary-encoder/selection-encoder.o"
+"Src/switch-debouncer/sw-debounce.o"
 "Src/tft-display-code/gfx.o"
 "Src/tft-display-code/hspi.o"
 "Src/tft-display-code/quarter-sorter-specific.o"
