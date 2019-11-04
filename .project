@@ -32,15 +32,20 @@
 		<link>
 			<name>Inc/hspi.h</name>
 			<type>1</type>
-			<location>/home/nzinn/Documents/Senior-Test/TFT-Test/Inc/hspi.h</location>
+			<location>D:/home/nzinn/Documents/Senior-Test/TFT-Test/Inc/hspi.h</location>
 		</link>
 		<link>
 			<name>Inc/pin-definitions.h</name>
 			<type>1</type>
-			<location>/home/nzinn/Documents/Senior-Test/TFT-Test/Inc/pin-definitions.h</location>
+			<location>D:/home/nzinn/Documents/Senior-Test/TFT-Test/Inc/pin-definitions.h</location>
 		</link>
 		<link>
 			<name>Src/rotary-encoder</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>Src/switch-debouncer</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -68,6 +73,16 @@
 			<name>Src/rotary-encoder/selection-encoder.h</name>
 			<type>1</type>
 			<locationURI>PROJECT_LOC/rotary-encoder/selection-encoder.h</locationURI>
+		</link>
+		<link>
+			<name>Src/switch-debouncer/sw-debounce.cpp</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/switch-debouncer/sw-debounce.cpp</locationURI>
+		</link>
+		<link>
+			<name>Src/switch-debouncer/sw-debounce.h</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/switch-debouncer/sw-debounce.h</locationURI>
 		</link>
 		<link>
 			<name>Src/tft-display-code/gfx.cpp</name>
