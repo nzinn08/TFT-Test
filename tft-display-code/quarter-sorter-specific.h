@@ -7,6 +7,7 @@
 
 //Include Files
 #include "text-box.h"
+#include "gfx.h"
 
 //C Interface
 #ifdef __cplusplus
@@ -31,6 +32,12 @@ const char* const stateNames[NUM_NAMES] = {"Alabama", "Alaska", "Arizona", "Arka
 #endif //End C Interface
 
 //C++ Interface
+//Public Functions
+namespace GUI_API
+{
+void drawSelectionBackground(TFT_GFX& tft_display, uint16_t background_color, uint16_t font_color, uint16_t line_color, uint16_t line_thickness,
+		uint8_t chosen_states_font_size, uint8_t state_selector_font_size);
+}
 //Class Definitions
 class CHOSEN_STATE_TEXT_BOX: public TFT_TEXT_BOX
 {

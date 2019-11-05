@@ -14380,11 +14380,11 @@ void ili9341_hspi_init(SPI_TypeDef *SPIx) {
  80059a6:	bd80      	pop	{r7, pc}
 
 080059a8 <_ZN21CHOSEN_STATE_TEXT_BOXC1EhthRK12TFT_TEXT_BOX>:
-//Public Function Prototypes
-
 //Private Function Definitions
 
 //Public Function Definitions
+
+
 CHOSEN_STATE_TEXT_BOX::CHOSEN_STATE_TEXT_BOX(uint8_t text_box_number, uint16_t font_color,
  80059a8:	b590      	push	{r4, r7, lr}
  80059aa:	b083      	sub	sp, #12
