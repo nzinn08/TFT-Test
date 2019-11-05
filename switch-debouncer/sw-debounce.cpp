@@ -43,7 +43,8 @@ void SW_DEBOUNCE::process(void)
 		if(!this->switchBitSequence)
 		{
 			this->msHeldCounter+= this->timerPeriodMs;
-			//Add if statements to check how long held is here, doesn't even need to be else if
+			//This if statement should handle the largest delay only, add if statements to compute how long button was held if not this value
+			//on release
 			if(this->msHeldCounter == static_cast<uint32_t>(SWITCH_STATE::THREE_SECOND_PRESS))
 			{
 				this->debouncedState = SWITCH_STATE::THREE_SECOND_PRESS;
@@ -51,11 +52,15 @@ void SW_DEBOUNCE::process(void)
 		}else{
 			//If there is a 1 in the bit sequence than the switch was released
 			this->stateMachineState = SW_STATE_MACHINE::SWITCH_RELEASED;
-			this->msHeldCounter = 0;
-			if(this->debouncedState < SWITCH_STATE::SHORT_PRESS)
+			//Only update state if our current count is less than the largest delay in SWITCH_STATE
+			if(this->msHeldCounter < static_cast<uint32_t>(SWITCH_STATE::THREE_SECOND_PRESS))
 			{
-				this->debouncedState = SWITCH_STATE::SHORT_PRESS;
+				if(this->debouncedState < SWITCH_STATE::SHORT_PRESS)
+				{
+					this->debouncedState = SWITCH_STATE::SHORT_PRESS;
+				}
 			}
+			this->msHeldCounter = 0;
 		}
 	}else if(this->stateMachineState == SW_STATE_MACHINE::SWITCH_RELEASED)
 	{
