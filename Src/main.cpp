@@ -50,6 +50,8 @@
 /* Private variables ---------------------------------------------------------*/
 SPI_HandleTypeDef hspi2;
 
+TIM_HandleTypeDef htim6;
+
 UART_HandleTypeDef huart2;
 
 SELECTION_ENCODER* encoderPtr = nullptr;
@@ -69,6 +71,7 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_SPI2_Init(void);
+static void MX_TIM6_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -109,6 +112,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_SPI2_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
   TFT_GFX tftDisplay{hspi2.Instance};
   const uint16_t backgroundColor = ILI9341_BLACK;
@@ -141,26 +145,16 @@ int main(void)
   }
   stateSelector.write(stateNames[0], fontColor, stateSelectorFontSize);
   //Initialize debouncer for buttons
-  SW_DEBOUNCE okButton{ENC_OK_GPIO_Port, ENC_OK_Pin, 1};
+  SW_DEBOUNCE okButton{ENC_OK_GPIO_Port, ENC_OK_Pin, 2, 8, htim6.Instance};
   okButtonPtr = &okButton;
+  //Start timer after initializing all buttons
+  htim6.Instance->CR1 |= TIM_CR1_CEN;
   //Initialize Rotary Encoder
   SELECTION_ENCODER stateEncoder{1, &stateSelector, fontColor, stateSelectorFontSize, stateNames, NUM_NAMES, chosenStates, NUM_BOXES};
   encoderPtr = &stateEncoder;
-  //Now enable interrupts for the rotary encoder
+  //Now enable interrupts for the rotary encoder and debouncer
   HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
-  //Demo of changing all the names of states in all the text boxes
-  /*uint8_t i = 0;
-  while(1)
-  {
-	  stateSelector.write(stateNames[i], fontColor, stateSelectorFontSize);
-	  for(int j = 0; j < NUM_BOXES; j++)
-	  {
-		  chosenStatePrinter(&chosenStates[j], j+1, stateNames[i], fontColor, chosenStatesFontSize);
-	  }
-	  HAL_Delay(500);
-	  i = (i+1)%50;
-  }*/
-
+  HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -274,6 +268,46 @@ static void MX_SPI2_Init(void)
 }
 
 /**
+  * @brief TIM6 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM6_Init(void)
+{
+
+  /* USER CODE BEGIN TIM6_Init 0 */
+
+  /* USER CODE END TIM6_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM6_Init 1 */
+  //Set a period of 2ms
+  /* USER CODE END TIM6_Init 1 */
+  htim6.Instance = TIM6;
+  htim6.Init.Prescaler = 240-1;
+  htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim6.Init.Period = 400-1;
+  htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim6, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM6_Init 2 */
+  //Clear status reg
+  htim6.Instance->SR &= TIM_SR_UIF;
+  HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 3, 0);
+  /* USER CODE END TIM6_Init 2 */
+
+}
+
+/**
   * @brief USART2 Initialization Function
   * @param None
   * @retval None
@@ -371,7 +405,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(ENC_OK_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI4_15_IRQn, 2, 0);
+  HAL_NVIC_SetPriority(EXTI4_15_IRQn, 1, 0);
 }
 
 /* USER CODE BEGIN 4 */

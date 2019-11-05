@@ -40,8 +40,11 @@ public:
  * @param gpio_port: port of switch
  * @param gpio_pin: pin of switch
  * @param timer_period_ms: The amount of time between timer interrupts in ms at which @process should be called.
+ * @param ms_for_valid_press: This should be a multiple of @timer_period_ms and (1 << MS_FOR_VALID_PRESS/timer_period_ms)
+ * @param timer_instance: This should be the instance of the timer that interrupts @timer_period_ms. You should start the timer after all debounce switches
+ * are constructed.
  */
-SW_DEBOUNCE(GPIO_TypeDef* gpio_port, uint16_t gpio_pin, uint32_t timer_period_ms);
+SW_DEBOUNCE(GPIO_TypeDef* gpio_port, uint16_t gpio_pin, uint32_t timer_period_ms, uint8_t ms_for_valid_press, TIM_TypeDef* timer_instance);
 //Public Function Prototypes
 /**
  * @brief This should be called once every @timer_period_ms milliseconds.
@@ -53,10 +56,6 @@ void process(void);
  */
 SWITCH_STATE getCurrentState(void);
 //Public Constants
-/**
- * @brief This should be a multiple of @timer_period_ms less than 7 and greater than 1
- */
-static constexpr uint8_t MS_FOR_VALID_PRESS = 7;
 //Public Variable
 private:
 enum struct SW_STATE_MACHINE
@@ -82,7 +81,11 @@ const uint8_t validPressBitSequence;
  */
 uint32_t msHeldCounter;
 const uint32_t timerPeriodMs;
+const uint8_t msForValidPress;
+TIM_TypeDef* timerInstance;
 //Private Function Prototypes
+inline void startCriticalSection(void);
+inline void stopCriticalSection(void);
 };
 
 #endif //End Header Guard

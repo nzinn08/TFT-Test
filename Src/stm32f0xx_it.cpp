@@ -47,6 +47,7 @@
 /* USER CODE BEGIN PV */
 extern SELECTION_ENCODER* encoderPtr;
 extern SW_DEBOUNCE* okButtonPtr;
+extern TIM_HandleTypeDef htim6;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -132,10 +133,7 @@ void SysTick_Handler(void)
   /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();
   /* USER CODE BEGIN SysTick_IRQn 1 */
-  if(okButtonPtr)
-  {
-	  okButtonPtr->process();
-  }
+
   /* USER CODE END SysTick_IRQn 1 */
 }
 
@@ -163,6 +161,22 @@ void EXTI4_15_IRQHandler(void)
   /* USER CODE BEGIN EXTI4_15_IRQn 1 */
 
   /* USER CODE END EXTI4_15_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM6 global and DAC channel underrun error interrupts.
+  */
+void TIM6_DAC_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM6_DAC_IRQn 0 */
+
+  /* USER CODE END TIM6_DAC_IRQn 0 */
+	//Clear interrupt flag
+	htim6.Instance->SR &= ~TIM_SR_UIF;
+	okButtonPtr->process();
+  /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
+
+  /* USER CODE END TIM6_DAC_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

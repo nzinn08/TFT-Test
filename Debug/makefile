@@ -56,7 +56,7 @@ all: TFT_Test.elf secondary-outputs
 
 # Tool invocations
 TFT_Test.elf: $(OBJS) $(USER_OBJS) D:\Documents\senior-mcu\TFT-Test\STM32F072RBTX_FLASH.ld
-	arm-none-eabi-g++ -o "TFT_Test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"D:\Documents\senior-mcu\TFT-Test\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TFT_Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "TFT_Test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"D:\Documents\senior-mcu\TFT-Test\STM32F072RBTX_FLASH.ld" -Wl,-Map="TFT_Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -84,6 +84,7 @@ void Error_Handler(void);
 #define ENC_A_EXTI_IRQn EXTI4_15_IRQn
 #define ENC_OK_Pin GPIO_PIN_11
 #define ENC_OK_GPIO_Port GPIOC
+#define ENC_OK_EXTI_IRQn EXTI4_15_IRQn
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
