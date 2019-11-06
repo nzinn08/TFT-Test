@@ -34,15 +34,37 @@ const char* const stateNames[NUM_NAMES] = {"Alabama", "Alaska", "Arizona", "Arka
 //C++ Interface
 class CHOSEN_STATE_TEXT_BOX;
 class SELECTION_ENCODER;
+//Enums
+enum struct OVERALL_STATES: uint8_t
+{
+	SELECTING,
+	SORTING,
+	FINISHED
+};
+enum struct SORTING_STATES: uint8_t
+{
+	TAKE_PICTURES,
+	MOVE_BASE_MOTOR,
+};
+enum struct CANCEL_STATES: uint8_t
+{
+	CONFIRM_CANCEL,
+	NO_CANCEL,
+};
 //Public Functions
+namespace UI_API
+{
+	void enableEncoder(uint16_t encA_pin, uint16_t encb_pin);
+	void disableEncoder(uint16_t encA_pin, uint16_t encb_pin);
+}//namespace UI_API
 namespace GUI_API
 {
 /**
  * @brief This does an entire reset of the GUI where we are selecting states
  */
-void resetSelectionGUI(TFT_GFX& tftDisplay, TFT_TEXT_BOX& instructionBox, TFT_TEXT_BOX& mainTitle, TFT_TEXT_BOX& stateSelector,
+void resetSelectionGUI(TFT_GFX& tftDisplay, TFT_TEXT_BOX& instructionBox, TFT_TEXT_BOX& mainTitle, TFT_TEXT_BOX& stateSelector, CHOSEN_STATE_TEXT_BOX chosenStates[NUM_BOXES],
 		const uint16_t backgroundColor,const uint16_t fontColor,const uint16_t lineColor,const uint16_t lineThickness,const uint8_t stateSelectorFontSize,
-		uint8_t& statesSelected);
+		uint8_t& statesSelected,SELECTION_ENCODER* encoder_ptr);
 /**
  * @brief This draws the background color and lines that make up the selecting states gui
  */
@@ -57,10 +79,22 @@ void writeSelectionWords(TFT_TEXT_BOX& instructionBox, TFT_TEXT_BOX& mainTitle, 
  */
 void printCurrentState(CHOSEN_STATE_TEXT_BOX chosenStates[NUM_BOXES], uint8_t& statesSelected,SELECTION_ENCODER* encoderPtr);
 /**
+ * @brief This removes the most recent state from the most recent chosen state text box
+ */
+void clearCurrentState(CHOSEN_STATE_TEXT_BOX chosenStates[NUM_BOXES], uint8_t& statesSelected);
+/**
  * @brief This displays the in-progress screen for after the user has finished selecting their states.
  */
 void displayInProgress(TFT_GFX& tftDisplay, TFT_TEXT_BOX& instructionBox, const uint16_t lineThickness, const uint16_t lineColor, const uint16_t backgroundColor, const uint16_t fontColor);
-}
+/**
+ * @brief This adds in the prompt for if you're sure you want to stop sorting
+ */
+void addConfirmQuit(TFT_GFX& tftDisplay, const uint16_t lineThickness,const uint16_t fontColor,const uint16_t backgroundColor);
+/**
+ * @brief This removes the prompt for confirming if you are quitting the sorting
+ */
+void removeConfirmQuit(TFT_GFX& tftDisplay, const uint16_t lineThickness, const uint16_t backgroundColor);
+}//namespace GUI_API
 //Class Definitions
 class CHOSEN_STATE_TEXT_BOX: public TFT_TEXT_BOX
 {
@@ -72,6 +106,7 @@ CHOSEN_STATE_TEXT_BOX(void);
 //Public Function Prototypes
 void printState(const char* state_name);
 const char* getCurrentText(void);
+void clearCurrentText(void);
 //Public Constants
 
 //Public Variable

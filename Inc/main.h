@@ -85,6 +85,8 @@ void Error_Handler(void);
 #define ENC_OK_Pin GPIO_PIN_11
 #define ENC_OK_GPIO_Port GPIOC
 #define ENC_OK_EXTI_IRQn EXTI4_15_IRQn
+#define BTN_CANCEL_Port GPIOC
+#define BTN_CANCEL_Pin GPIO_PIN_12
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

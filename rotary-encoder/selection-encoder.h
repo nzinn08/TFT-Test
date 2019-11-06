@@ -41,6 +41,7 @@ SELECTION_ENCODER(uint8_t ticks_per_step, TFT_TEXT_BOX* display_box,
 		CHOSEN_STATE_TEXT_BOX* selected_states,uint8_t selected_states_length);
 //Public Function Prototypes
 uint16_t getCurrentNameIndex(void);
+void setCurrentNameIndex(uint16_t index);
 /**
  * @brief This should be used upon selecting a state to print the next available state in the main text box
  */

@@ -47,6 +47,7 @@
 /* USER CODE BEGIN PV */
 extern SELECTION_ENCODER* encoderPtr;
 extern SW_DEBOUNCE* okButtonPtr;
+extern SW_DEBOUNCE* cancelButtonPtr;
 extern TIM_HandleTypeDef htim6;
 /* USER CODE END PV */
 
@@ -174,6 +175,7 @@ void TIM6_DAC_IRQHandler(void)
 	//Clear interrupt flag
 	htim6.Instance->SR &= ~TIM_SR_UIF;
 	okButtonPtr->process();
+	cancelButtonPtr->process();
   /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
 
   /* USER CODE END TIM6_DAC_IRQn 1 */

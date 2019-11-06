@@ -57,6 +57,7 @@ UART_HandleTypeDef huart2;
 SELECTION_ENCODER* encoderPtr = nullptr;
 
 SW_DEBOUNCE* okButtonPtr = nullptr;
+SW_DEBOUNCE* cancelButtonPtr = nullptr;
 
 /* USER CODE BEGIN PV */
 
@@ -138,6 +139,8 @@ int main(void)
   //Initialize debouncer for buttons
   SW_DEBOUNCE okButton{ENC_OK_GPIO_Port, ENC_OK_Pin, 2, 8, htim6.Instance};
   okButtonPtr = &okButton;
+  SW_DEBOUNCE cancelButton{BTN_CANCEL_Port, BTN_CANCEL_Pin, 2, 8, htim6.Instance};
+  cancelButtonPtr = &cancelButton;
   //Start timer after initializing all buttons
   htim6.Instance->CR1 |= TIM_CR1_CEN;
   //Initialize Rotary Encoder
@@ -150,27 +153,71 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
+  OVERALL_STATES ovState = OVERALL_STATES::SELECTING;
+  SORTING_STATES soState = SORTING_STATES::MOVE_BASE_MOTOR;
+  CANCEL_STATES caState = CANCEL_STATES::NO_CANCEL;
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  SWITCH_STATE currButtonState = okButton.getCurrentState();
-	  if(currButtonState == SWITCH_STATE::SHORT_PRESS)
+	  if(ovState == OVERALL_STATES::SELECTING)
 	  {
-		  GUI_API::printCurrentState(chosenStates, statesSelected, encoderPtr);
-	  }else if(currButtonState == SWITCH_STATE::THREE_SECOND_PRESS)
+		SWITCH_STATE okButtonState = okButton.getCurrentState();
+		if(okButtonState == SWITCH_STATE::SHORT_PRESS)
+		{
+			GUI_API::printCurrentState(chosenStates, statesSelected, encoderPtr);
+		}else if(okButtonState == SWITCH_STATE::THREE_SECOND_PRESS)
+		{
+			GUI_API::displayInProgress(tftDisplay, instructionBox, lineThickness, lineColor, backgroundColor, fontColor);
+			UI_API::disableEncoder(ENC_A_Pin, ENC_B_Pin);
+			ovState = OVERALL_STATES::SORTING;
+			soState = SORTING_STATES::MOVE_BASE_MOTOR;
+			caState = CANCEL_STATES::NO_CANCEL;
+		}
+		SWITCH_STATE cancelButtonState = cancelButton.getCurrentState();
+		if(cancelButtonState >= SWITCH_STATE::SHORT_PRESS)
+		{
+			GUI_API::clearCurrentState(chosenStates, statesSelected);
+		}
+	  }else if(ovState == OVERALL_STATES::SORTING)
 	  {
-		  //This should be where we go to the screen that simply displays that sorting is in progress.
-		  /*GUI_API::resetSelectionGUI(tftDisplay, instructionBox, mainTitle, stateSelector, backgroundColor, fontColor, lineColor,
-				  lineThickness, stateSelectorFontSize, statesSelected);*/
-		//TODO: Need to disable encoder and ok button in here
-		GUI_API::displayInProgress(tftDisplay, instructionBox, lineThickness, lineColor, backgroundColor, fontColor);
-		TFT_TEXT_BOX confirmQuit{&tftDisplay, backgroundColor, lineThickness + 8, (uint16_t)(3*tftDisplay.height()/5.0f),(int16_t)(tftDisplay.width() - lineThickness - 8), true};
-		uint16_t bottomConfirmQuit = confirmQuit.write("*Are you sure you want to quit?*", fontColor, 2);
-		TFT_TEXT_BOX confirmQuitInstructions{&tftDisplay, backgroundColor, lineThickness + 8, (uint16_t)(bottomConfirmQuit + 10),(int16_t)(tftDisplay.width() - lineThickness - 8), true};
-		confirmQuitInstructions.write("Hold cancel for 3 seconds to confirm quit, tap to cancel.", fontColor, 1);
+		//Do state-specific actions
+		if(soState == SORTING_STATES::MOVE_BASE_MOTOR)
+		{
+
+		}else if(soState == SORTING_STATES::TAKE_PICTURES)
+		{
+
+		}
+		//Can cancel in any soState
+		if(caState == CANCEL_STATES::CONFIRM_CANCEL)
+		{
+			SWITCH_STATE cancelButtonState = cancelButton.getCurrentState();
+			if(cancelButtonState == SWITCH_STATE::SHORT_PRESS)
+			{
+				//Cancel the cancel
+				GUI_API::removeConfirmQuit(tftDisplay, lineThickness, backgroundColor);
+				caState = CANCEL_STATES::NO_CANCEL;
+			}else if(cancelButtonState == SWITCH_STATE::THREE_SECOND_PRESS)
+			{
+				//Go back to selecting states
+				ovState = OVERALL_STATES::SELECTING;
+				GUI_API::resetSelectionGUI(tftDisplay, instructionBox, mainTitle, stateSelector,chosenStates, backgroundColor,
+						fontColor, lineColor, lineThickness, stateSelectorFontSize, statesSelected, encoderPtr);
+				UI_API::enableEncoder(ENC_A_Pin, ENC_B_Pin);
+				//Consume the last button press
+				okButton.getCurrentState();
+			}
+		}else if(caState == CANCEL_STATES::NO_CANCEL)
+		{
+			SWITCH_STATE cancelButtonState = cancelButton.getCurrentState();
+			if(cancelButtonState >= SWITCH_STATE::SHORT_PRESS)
+			{
+				GUI_API::addConfirmQuit(tftDisplay, lineThickness, fontColor, backgroundColor);
+				caState = CANCEL_STATES::CONFIRM_CANCEL;
+			}
+		}
 	  }
   }
   /* USER CODE END 3 */
@@ -396,6 +443,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(ENC_OK_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : BTN_CANCEL_Pin */
+  GPIO_InitStruct.Pin = BTN_CANCEL_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(BTN_CANCEL_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI4_15_IRQn, 1, 0);

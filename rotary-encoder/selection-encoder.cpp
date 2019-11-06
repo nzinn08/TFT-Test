@@ -25,6 +25,10 @@ namespace
 {
 bool stringsEqual(const char* string1, const char* string2)
 {
+	if(string1 == nullptr || string2 == nullptr)
+	{
+		return false;
+	}
 	while(*string1 != '\0' && *string2 != '\0' && *(string1) == *(string2))
 	{
 		string1++;
@@ -47,6 +51,11 @@ selectedStates{selected_states}, numSelectedStates{selected_states_length}
 uint16_t SELECTION_ENCODER::getCurrentNameIndex(void)
 {
 	return this->nameIndex;
+}
+
+void SELECTION_ENCODER::setCurrentNameIndex(uint16_t index)
+{
+	this->nameIndex = index;
 }
 
 void SELECTION_ENCODER::printNextAvailableState(void)
