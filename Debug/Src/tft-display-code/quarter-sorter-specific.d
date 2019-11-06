@@ -31,7 +31,11 @@ Src/tft-display-code/quarter-sorter-specific.o: \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h \
- ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
+ ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h \
+ ../rotary-encoder/selection-encoder.h \
+ ../rotary-encoder/generic-rotary-encoder.h \
+ ../tft-display-code/text-box.h \
+ ../tft-display-code/quarter-sorter-specific.h
 
 D:/Documents/senior-mcu/TFT-Test/tft-display-code/quarter-sorter-specific.h:
 
@@ -98,3 +102,11 @@ D:/Documents/senior-mcu/TFT-Test/tft-display-code/gfx.h:
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h:
 
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h:
+
+../rotary-encoder/selection-encoder.h:
+
+../rotary-encoder/generic-rotary-encoder.h:
+
+../tft-display-code/text-box.h:
+
+../tft-display-code/quarter-sorter-specific.h:

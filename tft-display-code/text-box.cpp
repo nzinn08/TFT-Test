@@ -31,7 +31,7 @@ main_display{display}, xPos{x_pos}, yPos{y_pos}, prevMaxX{x_pos}, prevMaxY{y_pos
 }
 
 TFT_TEXT_BOX::TFT_TEXT_BOX(void):
-main_display{nullptr}, xPos{0}, yPos{0}, prevMaxX{0}, prevMaxY{0}, bgColor{0}, isCentered{0}, wrapXEdge{0}
+main_display{nullptr}, xPos{0}, yPos{0}, prevMaxX{0}, prevMaxY{0}, bgColor{0},wrapXEdge{0}, isCentered{0}
 {}
 
 uint16_t TFT_TEXT_BOX::write(const char* string, uint16_t font_color, uint8_t font_size)

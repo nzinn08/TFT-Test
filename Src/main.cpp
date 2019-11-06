@@ -58,10 +58,6 @@ SELECTION_ENCODER* encoderPtr = nullptr;
 
 SW_DEBOUNCE* okButtonPtr = nullptr;
 
-CHOSEN_STATE_TEXT_BOX chosenStates[NUM_BOXES];
-
-uint8_t statesSelected = 0;
-
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -123,25 +119,20 @@ int main(void)
   const uint8_t stateSelectorFontSize = 3;
   tftDisplay.setRotation(0);
   //Set background to correct color and add outline
-  tftDisplay.writeFillRect(0, 0, tftDisplay.width(), tftDisplay.height(), lineColor);
-  tftDisplay.writeFillRect(lineThickness, lineThickness, tftDisplay.width() - lineThickness * 2, tftDisplay.height() - lineThickness * 2, backgroundColor);
-  //Draw the GUI lines
-  tftDisplay.writeFillRect(0,(tftDisplay.height()-lineThickness)/2, tftDisplay.width(), lineThickness, lineColor);
-  for(uint16_t i = 1; i < NUM_BOXES; i++)
-  {
-	  tftDisplay.writeFillRect(0, tftDisplay.height()/2 + i*(tftDisplay.height()/(2 *NUM_BOXES)) - lineThickness/2, tftDisplay.width(), lineThickness, lineColor);
-  }
-
-  TFT_TEXT_BOX instructionBox{&tftDisplay,backgroundColor,lineThickness + 8, lineThickness + 8, tftDisplay.width() - lineThickness - 8, false};
+  GUI_API::drawSelectionLines(tftDisplay, backgroundColor, fontColor, lineColor, lineThickness);
+  //Create and set all the text boxes
+  TFT_TEXT_BOX instructionBox{&tftDisplay,backgroundColor,lineThickness + 8, lineThickness + 8, (int16_t)(tftDisplay.width() - lineThickness - 8), false};
   uint16_t bottomInstructionBox = instructionBox.write("*Hold OK button for 3 seconds to confirm selection.", fontColor, 1);
-  TFT_TEXT_BOX mainTitle{&tftDisplay,backgroundColor,lineThickness + 8, bottomInstructionBox + 10, tftDisplay.width() - lineThickness - 8, false};
+  TFT_TEXT_BOX mainTitle{&tftDisplay,backgroundColor,lineThickness + 8, (uint16_t)(bottomInstructionBox + 10),(int16_t)(tftDisplay.width() - lineThickness - 8), false};
   uint16_t bottomMainTitle = mainTitle.write("State Selection: ", fontColor, 2);
-  TFT_TEXT_BOX stateSelector{&tftDisplay, backgroundColor, lineThickness, bottomMainTitle + 25,tftDisplay.width() - lineThickness, true};
+  TFT_TEXT_BOX stateSelector{&tftDisplay, backgroundColor, lineThickness, (uint16_t)(bottomMainTitle + 25),(int16_t)(tftDisplay.width() - lineThickness), true};
   //Generate the chosenStates text boxes
-  for(int i = 0; i < NUM_BOXES; i++)
+  CHOSEN_STATE_TEXT_BOX chosenStates[NUM_BOXES];
+  uint8_t statesSelected = 0;
+  for(uint8_t i = 0; i < NUM_BOXES; i++)
   {
 	  uint16_t yPos = tftDisplay.height()/2.0f + (float)(2*i+1)*tftDisplay.height()/(2.0f* NUM_BOXES * 2.0f) - (chosenStatesFontSize * 8.0f)/2;
-	  chosenStates[i] = CHOSEN_STATE_TEXT_BOX{i+1, fontColor, chosenStatesFontSize, TFT_TEXT_BOX{&tftDisplay, backgroundColor, lineThickness + 8, yPos,tftDisplay.width() - lineThickness - 8, false}};
+	  chosenStates[i] = CHOSEN_STATE_TEXT_BOX{(uint8_t)(i+1), fontColor, chosenStatesFontSize, TFT_TEXT_BOX{&tftDisplay, backgroundColor, lineThickness + 8, yPos,(int16_t)(tftDisplay.width() - lineThickness - 8), false}};
   }
   stateSelector.write(stateNames[0], fontColor, stateSelectorFontSize);
   //Initialize debouncer for buttons
@@ -168,16 +159,18 @@ int main(void)
 	  SWITCH_STATE currButtonState = okButton.getCurrentState();
 	  if(currButtonState == SWITCH_STATE::SHORT_PRESS)
 	  {
-		  chosenStates[statesSelected++].printState(stateNames[encoderPtr->getCurrentNameIndex()]);
-		  encoderPtr->printNextAvailableState();
-		  //Stay at the last state box
-		  if(statesSelected == NUM_BOXES)
-		  {
-			  statesSelected--;
-		  }
+		  GUI_API::printCurrentState(chosenStates, statesSelected, encoderPtr);
 	  }else if(currButtonState == SWITCH_STATE::THREE_SECOND_PRESS)
 	  {
-
+		  //This should be where we go to the screen that simply displays that sorting is in progress.
+		  /*GUI_API::resetSelectionGUI(tftDisplay, instructionBox, mainTitle, stateSelector, backgroundColor, fontColor, lineColor,
+				  lineThickness, stateSelectorFontSize, statesSelected);*/
+		//TODO: Need to disable encoder and ok button in here
+		GUI_API::displayInProgress(tftDisplay, instructionBox, lineThickness, lineColor, backgroundColor, fontColor);
+		TFT_TEXT_BOX confirmQuit{&tftDisplay, backgroundColor, lineThickness + 8, (uint16_t)(3*tftDisplay.height()/5.0f),(int16_t)(tftDisplay.width() - lineThickness - 8), true};
+		uint16_t bottomConfirmQuit = confirmQuit.write("*Are you sure you want to quit?*", fontColor, 2);
+		TFT_TEXT_BOX confirmQuitInstructions{&tftDisplay, backgroundColor, lineThickness + 8, (uint16_t)(bottomConfirmQuit + 10),(int16_t)(tftDisplay.width() - lineThickness - 8), true};
+		confirmQuitInstructions.write("Hold cancel for 3 seconds to confirm quit, tap to cancel.", fontColor, 1);
 	  }
   }
   /* USER CODE END 3 */

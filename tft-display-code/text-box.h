@@ -45,7 +45,6 @@ public:
  * @param bg_color: This is the background color this text box will be on top of
  * @param x_pos: x position of bottom left corner of text box
  * @param y_pos: y position of bottom left corner of text box
- * @param wrap_allowed: if true allows text wrapping
  * @param x_edge: This is the x_edge used for screen wrapping. If -1 this is just the edge of the screen.
  */
 TFT_TEXT_BOX(TFT_GFX* display, uint16_t bg_color, uint16_t x_pos, uint16_t y_pos, int16_t x_edge = -1, bool is_centered = false);

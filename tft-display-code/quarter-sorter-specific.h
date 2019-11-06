@@ -32,11 +32,34 @@ const char* const stateNames[NUM_NAMES] = {"Alabama", "Alaska", "Arizona", "Arka
 #endif //End C Interface
 
 //C++ Interface
+class CHOSEN_STATE_TEXT_BOX;
+class SELECTION_ENCODER;
 //Public Functions
 namespace GUI_API
 {
-void drawSelectionBackground(TFT_GFX& tft_display, uint16_t background_color, uint16_t font_color, uint16_t line_color, uint16_t line_thickness,
-		uint8_t chosen_states_font_size, uint8_t state_selector_font_size);
+/**
+ * @brief This does an entire reset of the GUI where we are selecting states
+ */
+void resetSelectionGUI(TFT_GFX& tftDisplay, TFT_TEXT_BOX& instructionBox, TFT_TEXT_BOX& mainTitle, TFT_TEXT_BOX& stateSelector,
+		const uint16_t backgroundColor,const uint16_t fontColor,const uint16_t lineColor,const uint16_t lineThickness,const uint8_t stateSelectorFontSize,
+		uint8_t& statesSelected);
+/**
+ * @brief This draws the background color and lines that make up the selecting states gui
+ */
+void drawSelectionLines(TFT_GFX& tftDisplay,const uint16_t backgroundColor,const uint16_t fontColor,const uint16_t lineColor,const uint16_t lineThickness);
+/**
+ * @brief This fills in all the text boxes for a reset of the selecting states gui
+ */
+void writeSelectionWords(TFT_TEXT_BOX& instructionBox, TFT_TEXT_BOX& mainTitle, TFT_TEXT_BOX& stateSelector,const uint16_t fontColor,
+		const uint8_t stateSelectorFontSize);
+/**
+ * @brief This is to print the current state into the current chosen state text box
+ */
+void printCurrentState(CHOSEN_STATE_TEXT_BOX chosenStates[NUM_BOXES], uint8_t& statesSelected,SELECTION_ENCODER* encoderPtr);
+/**
+ * @brief This displays the in-progress screen for after the user has finished selecting their states.
+ */
+void displayInProgress(TFT_GFX& tftDisplay, TFT_TEXT_BOX& instructionBox, const uint16_t lineThickness, const uint16_t lineColor, const uint16_t backgroundColor, const uint16_t fontColor);
 }
 //Class Definitions
 class CHOSEN_STATE_TEXT_BOX: public TFT_TEXT_BOX

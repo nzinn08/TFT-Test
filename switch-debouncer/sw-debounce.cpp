@@ -28,7 +28,7 @@ inline void SW_DEBOUNCE::stopCriticalSection(void)
 //Public Function Definitions
 SW_DEBOUNCE::SW_DEBOUNCE(GPIO_TypeDef* gpio_port, uint16_t gpio_pin, uint32_t timer_period_ms, uint8_t ms_for_valid_press, TIM_TypeDef* timer_instance):
 gpioPort{gpio_port}, gpioPin{gpio_pin}, debouncedState{SWITCH_STATE::NO_PRESS},
-switchBitSequence{0xFF},stateMachineState{SW_STATE_MACHINE::SWITCH_OPEN}, validPressBitSequence{1 << static_cast<uint8_t>(ms_for_valid_press/timer_period_ms)},
+switchBitSequence{0xFF},stateMachineState{SW_STATE_MACHINE::SWITCH_OPEN}, validPressBitSequence{static_cast<uint8_t>(1 << static_cast<uint8_t>(ms_for_valid_press/timer_period_ms))},
 msHeldCounter{0}, timerPeriodMs{timer_period_ms}, msForValidPress{ms_for_valid_press} , timerInstance{timer_instance}
 {}
 
@@ -37,7 +37,7 @@ void SW_DEBOUNCE::process(void)
 	this->switchBitSequence = (this->switchBitSequence << 1) | ((this->gpioPort->IDR & this->gpioPin) != 0);
 	if(this->stateMachineState == SW_STATE_MACHINE::SWITCH_OPEN)
 	{
-		if((this->switchBitSequence & (this->validPressBitSequence | this->validPressBitSequence - 1)) == this->validPressBitSequence)
+		if((this->switchBitSequence & (this->validPressBitSequence | (this->validPressBitSequence - 1))) == this->validPressBitSequence)
 		{
 			this->stateMachineState = SW_STATE_MACHINE::VALID_PRESS_DETECTED;
 			this->msHeldCounter = this->msForValidPress;
