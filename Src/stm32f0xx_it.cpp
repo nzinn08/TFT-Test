@@ -157,8 +157,6 @@ void EXTI4_15_IRQHandler(void)
   HAL_GPIO_EXTI_IRQHandler(ENC_A_Pin);
   //This is for the encoder B input
   HAL_GPIO_EXTI_IRQHandler(ENC_B_Pin);
-  //This is for button and should be removed
-  HAL_GPIO_EXTI_IRQHandler(B1_Pin);
   /* USER CODE BEGIN EXTI4_15_IRQn 1 */
 
   /* USER CODE END EXTI4_15_IRQn 1 */
@@ -187,11 +185,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	if(GPIO_Pin == ENC_A_Pin || GPIO_Pin == ENC_B_Pin)
 	{
 		encoderPtr->process((ENC_A_GPIO_Port->IDR & ENC_A_Pin) != 0, (ENC_B_GPIO_Port->IDR & ENC_B_Pin) != 0);
-	}else if(GPIO_Pin == B1_Pin)
-	{
-		HAL_Delay(10);
-		if(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin) == GPIO_PIN_RESET)
-			HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 	}
 }
 
